@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
-import { Gauge, Sparkles, Layers, Target, ShieldCheck } from "lucide-react";
+import { Sparkles, Gauge, Smartphone, Layers, ShieldCheck, MessageSquare } from "lucide-react";
 
 const reasons = [
-  { icon: Gauge, title: "Fast Delivery", desc: "Quick turnaround without cutting corners on quality." },
-  { icon: Sparkles, title: "Clean UI/UX", desc: "Modern, intuitive interfaces that feel premium and effortless." },
-  { icon: Layers, title: "Scalable Solutions", desc: "Architecture built to grow with your business and users." },
-  { icon: Target, title: "Business-Focused Results", desc: "Code that drives revenue, retention and real outcomes." },
-  { icon: ShieldCheck, title: "Security Conscious", desc: "Best practices baked in — auth, data, and payments handled right." },
+  { icon: Sparkles, title: "Clean Premium UI", desc: "Interfaces that build instant trust and feel high-end on every device." },
+  { icon: Gauge, title: "Fast Websites", desc: "Optimized performance that keeps visitors engaged and converting." },
+  { icon: Smartphone, title: "Apps Users Love", desc: "Mobile experiences crafted for daily use, retention and delight." },
+  { icon: Layers, title: "Built To Scale", desc: "Architecture that grows with your business — no rebuilds needed." },
+  { icon: ShieldCheck, title: "Security Conscious", desc: "Auth, data and payments handled with industry best practices." },
+  { icon: MessageSquare, title: "Reliable Communication", desc: "Clear updates, on-time delivery, and honest expectations." },
 ];
 
 const WhyMe = () => {
@@ -16,7 +17,7 @@ const WhyMe = () => {
         <div className="max-w-2xl mb-16">
           <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">— Why Hire Me</div>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
-            Built for <span className="text-gradient-primary">serious teams</span>.
+            Why businesses choose <span className="text-gradient-primary">Lixxon Tech</span>.
           </h2>
         </div>
 
@@ -28,9 +29,7 @@ const WhyMe = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.07 }}
-              className={`glass rounded-3xl p-7 hover:border-primary/30 transition-all duration-500 ${
-                i === 0 ? "lg:col-span-2 lg:row-span-1" : ""
-              }`}
+              className="glass rounded-3xl p-7 hover:border-primary/30 transition-all duration-500 hover:-translate-y-1"
             >
               <div className="flex items-start gap-4">
                 <div className="h-11 w-11 shrink-0 rounded-xl bg-primary/10 text-primary flex items-center justify-center">

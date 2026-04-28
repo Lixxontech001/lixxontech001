@@ -1,16 +1,17 @@
 import { useEffect } from "react";
 import Navbar from "@/components/site/Navbar";
 import Hero from "@/components/site/Hero";
-import About from "@/components/site/About";
+import WhyMe from "@/components/site/WhyMe";
 import Services from "@/components/site/Services";
 import Projects from "@/components/site/Projects";
-import WhyMe from "@/components/site/WhyMe";
+import Results from "@/components/site/Results";
+import About from "@/components/site/About";
+import Testimonials from "@/components/site/Testimonials";
 import Contact from "@/components/site/Contact";
 import Footer from "@/components/site/Footer";
 
 const Index = () => {
   useEffect(() => {
-    // JSON-LD person schema for SEO
     const ld = document.createElement("script");
     ld.type = "application/ld+json";
     ld.text = JSON.stringify({
@@ -32,10 +33,12 @@ const Index = () => {
     <main className="relative min-h-screen overflow-x-hidden">
       <Navbar />
       <Hero />
-      <About />
+      <WhyMe />
       <Services />
       <Projects />
-      <WhyMe />
+      <Results />
+      <About />
+      <Testimonials />
       <Contact />
       <Footer />
     </main>

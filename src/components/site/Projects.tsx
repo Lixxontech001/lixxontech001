@@ -3,25 +3,32 @@ import { ArrowUpRight } from "lucide-react";
 import ecommerce from "@/assets/project-ecommerce.jpg";
 import hospital from "@/assets/project-hospital.jpg";
 import food from "@/assets/project-food.jpg";
+import portfolio from "@/assets/project-portfolio.jpg";
 
 const projects = [
   {
-    title: "E-commerce Platform",
+    title: "Modern eCommerce Store",
     tag: "Web · Stripe · Next.js",
-    desc: "A full-featured online store with cart, checkout, admin panel and analytics.",
+    desc: "Conversion-focused online store with sleek UI, checkout flow, and admin tools.",
     img: ecommerce,
   },
   {
     title: "Hospital Management Dashboard",
     tag: "Dashboard · React · Charts",
-    desc: "Patient management, appointments and real-time analytics for healthcare teams.",
+    desc: "Secure platform for appointments, staff, records, and operations.",
     img: hospital,
   },
   {
     title: "Food Delivery Mobile App",
     tag: "Mobile · React Native",
-    desc: "Cross-platform ordering app with live tracking, payments and reviews.",
+    desc: "Modern mobile-first app for ordering, tracking, and customer retention.",
     img: food,
+  },
+  {
+    title: "Company Portfolio Website",
+    tag: "Web · Brand · CMS",
+    desc: "Premium brand website designed to increase trust and generate leads.",
+    img: portfolio,
   },
 ];
 
@@ -31,7 +38,7 @@ const Projects = () => {
       <div className="container">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div className="max-w-2xl">
-            <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">— Selected Work</div>
+            <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">— Featured Projects</div>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
               Projects that <span className="text-gradient-primary">ship & scale</span>.
             </h2>
@@ -41,22 +48,22 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {projects.map((p, i) => (
             <motion.article
               key={p.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
+              transition={{ duration: 0.6, delay: i * 0.08 }}
               className="group relative glass rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-elevated"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className="relative aspect-[16/10] overflow-hidden">
                 <img
                   src={p.img}
                   alt={p.title}
                   width={1024}
-                  height={768}
+                  height={640}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -65,9 +72,9 @@ const Projects = () => {
                   <ArrowUpRight size={18} />
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-6 md:p-8">
                 <div className="mono text-xs text-primary mb-2">{p.tag}</div>
-                <h3 className="font-display text-xl font-semibold mb-2">{p.title}</h3>
+                <h3 className="font-display text-xl md:text-2xl font-semibold mb-2">{p.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
               </div>
             </motion.article>
