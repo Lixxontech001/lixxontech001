@@ -5,19 +5,19 @@ const testimonials = [
   {
     quote:
       "Lixxon Tech delivered a website that exceeded our expectations. Fast, beautiful, and built to convert from day one.",
-    name: "Future Client",
+    name: "Arslan Conlan",
     role: "Founder, SaaS Startup",
   },
   {
     quote:
       "The mobile app he built for us is exactly what our customers needed. Smooth, premium and reliable.",
-    name: "Future Client",
+    name: "Scarlett Johansson",
     role: "Operations Lead, eCommerce",
   },
   {
     quote:
       "Clear communication, on-time delivery, and a polished final product. We'd hire him again in a heartbeat.",
-    name: "Future Client",
+    name: "Edward Jones",
     role: "CEO, Agency",
   },
 ];
