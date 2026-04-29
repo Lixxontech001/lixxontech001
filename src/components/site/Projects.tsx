@@ -44,7 +44,7 @@ const Projects = () => {
             </h2>
           </div>
           <p className="text-muted-foreground max-w-sm">
-            A glimpse of recent products built end-to-end — from architecture to launch.
+            A glimpse of recent products built end-to-end _ from architecture to launch.
           </p>
         </div>
 
