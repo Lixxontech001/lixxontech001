@@ -45,7 +45,7 @@ const About = () => {
             </h2>
             <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
               I'm <span className="text-foreground font-medium">Olatoyosi Ridwan</span>,
-              founder of <span className="text-foreground font-medium">Lixxon Tech</span> — a
+              founder of <span className="text-foreground font-medium">Lixxon Tech</span> _ a
               developer focused on shipping scalable, user-friendly, high-performance
               digital products for ambitious teams and founders.
             </p>
