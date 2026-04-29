@@ -76,20 +76,20 @@ const Contact = () => {
 
                 <div className="grid grid-cols-2 gap-3">
                   <Button asChild variant="glass" className="w-full">
-                    <a href="https://github.com/" target="_blank" rel="noreferrer noopener">
+                    <a href="https://github.com/lixxontech001" target="_blank" rel="noreferrer noopener">
                       <Github size={16} /> GitHub
                     </a>
                   </Button>
                   <Button asChild variant="glass" className="w-full">
                     <a href="#" download>
-                      <FileText size={16} /> CV
+                      <FileText size={16} /> Download CV
                     </a>
                   </Button>
                 </div>
               </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4" action="https://formspree.io/f/xxxxx" method="POST">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="text-xs mono text-muted-foreground mb-2 block">Name</label>
@@ -137,11 +137,11 @@ const Contact = () => {
 
               <div className="flex flex-wrap gap-3 pt-2">
                 <Button type="submit" variant="primary" size="lg" disabled={submitting}>
-                  Send Message <ArrowRight size={16} />
+                  Start project <ArrowRight size={16} />
                 </Button>
                 <Button asChild variant="glass" size="lg">
                   <a
-                    href="https://wa.me/?text=Hi%20Lixxon%20Tech%2C%20I%27d%20like%20to%20discuss%20a%20project."
+                    href="https://wa.me/2349040057383?text=Hi%20Lixxon%20Tech%2C%20I%27d%20like%20to%20discuss%20a%20project."
                     target="_blank"
                     rel="noreferrer noopener"
                   >
