@@ -8,7 +8,7 @@ const services = [
   { icon: LayoutDashboard, title: "SaaS Dashboard Development", desc: "Powerful internal tools and data dashboards that actually work." },
   { icon: Rocket, title: "Landing Pages That Convert", desc: "Pixel-perfect launches engineered for speed and conversions." },
   { icon: Wrench, title: "Redesign & Performance Fixes", desc: "Refresh outdated interfaces and unlock faster load times." },
-  { icon: Plug, title: "API Integrations", desc: "Stripe, Supabase, OpenAI, custom REST/GraphQL — wired in cleanly." },
+  { icon: Plug, title: "API Integrations", desc: "Stripe, Supabase, OpenAI, custom REST/GraphQL _ wired in cleanly." },
   { icon: Settings2, title: "Custom Business Tools", desc: "Internal apps and automations tailored to how your team works." },
 ];
 
