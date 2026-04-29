@@ -5,7 +5,7 @@ const reasons = [
   { icon: Sparkles, title: "Clean Premium UI", desc: "Interfaces that build instant trust and feel high-end on every device." },
   { icon: Gauge, title: "Fast Websites", desc: "Optimized performance that keeps visitors engaged and converting." },
   { icon: Smartphone, title: "Apps Users Love", desc: "Mobile experiences crafted for daily use, retention and delight." },
-  { icon: Layers, title: "Built To Scale", desc: "Architecture that grows with your business — no rebuilds needed." },
+  { icon: Layers, title: "Built To Scale", desc: "Architecture that grows with your business _ no rebuilds needed." },
   { icon: ShieldCheck, title: "Security Conscious", desc: "Auth, data and payments handled with industry best practices." },
   { icon: MessageSquare, title: "Reliable Communication", desc: "Clear updates, on-time delivery, and honest expectations." },
 ];
