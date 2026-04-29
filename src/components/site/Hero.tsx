@@ -85,7 +85,7 @@ const Hero = () => {
                 </a>
               </Button>
               <Button asChild variant="ghostLine" size="lg">
-                <a href="#" download>
+                <a href="Olatoyosi_Ridwan_Premium_C.pdf" download>
                   <Download size={18} /> Download CV
                 </a>
               </Button>
