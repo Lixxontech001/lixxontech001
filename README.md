@@ -1,4 +1,4 @@
-<h1 align="center">Hi, I'm Lixxon (Olatoyosi Ridwan) 👋</h1>
+<h1 align="center">Hi, I'm Lixxon (Olatoyosi Ridwan) </h1>
 <h3 align="center">Django Full‑Stack Web Developer</h3>
 <p align="center">
   <em>Building secure, scalable web applications that drive revenue.</em>
@@ -6,7 +6,7 @@
 
 ---
 
-### 🛠️ Tech Stack & Tools
+###  Tech Stack & Tools
 <p align="center">
   <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" />
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
@@ -20,16 +20,16 @@
 
 ---
 
-### 👨‍💻 About Me
-- 💻 I build complete web applications with **Django, DRF, React & Next.js** – from complex backends to pixel‑perfect frontends.
-- 🔐 Currently pursuing a **Cybersecurity degree at LAUTECH**, weaving secure coding into every project.
-- 🤖 I leverage AI tools to accelerate development without compromising quality.
-- 🌍 Open to **remote freelance projects** – I deliver MVPs in weeks, not months.
-- 📫 Reach me at **lixxontech@gmail.com** or visit **[lixxontech001.vercel.app](https://lixxontech001.vercel.app)**.
+###  About Me
+-  I build complete web applications with **Django, DRF, React & Next.js** – from complex backends to pixel‑perfect frontends.
+-  Currently pursuing a **Cybersecurity degree at LAUTECH**, weaving secure coding into every project.
+-  I leverage AI tools to accelerate development without compromising quality.
+-  Open to **remote freelance projects** – I deliver MVPs in weeks, not months.
+-  Reach me at **lixxontech@gmail.com** or visit **[lixxontech001.vercel.app](https://lixxontech001.vercel.app)**.
 
 ---
 
-### 🚀 Featured Projects
+###  Featured Projects
 | Project | Description | Tech |
 |---------|-------------|------|
 | [**TradeSphere**](https://github.com/lixxontech001/tradesphere-marketplace) | Multi‑Vendor Marketplace with Stripe Connect payouts | Django, Stripe, React |
@@ -37,18 +37,18 @@
 | [**MediBoard**](https://github.com/lixxontech001/mediboard-hospital-system) | Hospital Management Suite with real‑time WebSockets | Django Channels, React |
 | [**EstatePro**](https://github.com/lixxontech001/estatepro-realestate-crm) | Real‑Estate CRM & Portal with automated lead routing | Django, Next.js, Supabase |
 
-> 💡 *Click on any project to see the full codebase, README, and features.*
+>  *Click on any project to see the full codebase, README, and features.*
 
 ---
 
-### 🌱 What I’m Working On
-- ⚙️ Deepening **DevOps skills** with Docker, CI/CD, and AWS.
-- 🧠 Exploring **AI agents** integrated into Django backends.
-- ✨ **Building in public** on [X (Twitter)](https://x.com/Lixxon_Tech) – follow my journey.
+###  What I’m Working On
+-  Deepening **DevOps skills** with Docker, CI/CD, and AWS.
+-  Exploring **AI agents** integrated into Django backends.
+-  **Building in public** on [X (Twitter)](https://x.com/Lixxon_Tech) – follow my journey.
 
 ---
 
-### 📬 Connect With Me
+###  Connect With Me
 <p align="center">
   <a href="https://lixxontech001.vercel.app"><img src="https://img.shields.io/badge/Portfolio-Visit-0A192F?style=for-the-badge&logo=google-chrome&logoColor=white" /></a>
   <a href="mailto:lixxontech@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
@@ -58,6 +58,6 @@
 
 ---
 
-<p align="center">
-  <em>⚡ Fun fact: I’m 17, powered by curiosity and jollof rice.</em>
-</p>
+<!-- <p align="center">
+  <em>⚡ Fun fact: I’m 19, powered by curiosity and jollof rice.</em>
+</p> -->
