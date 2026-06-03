@@ -1,50 +1,38 @@
 import { motion } from "framer-motion";
-import { Globe, ShoppingBag, Smartphone, LayoutDashboard, Rocket, Wrench, Plug, Settings2 } from "lucide-react";
 
 const services = [
-  { icon: Globe, title: "Business Website Development", desc: "High-converting marketing sites tailored to your brand and goals." },
-  { icon: ShoppingBag, title: "eCommerce Website Development", desc: "Modern shops with seamless checkout, payments and analytics." },
-  { icon: Smartphone, title: "Mobile App Development", desc: "Cross-platform iOS & Android apps built with React Native." },
-  { icon: LayoutDashboard, title: "SaaS Dashboard Development", desc: "Powerful internal tools and data dashboards that actually work." },
-  { icon: Rocket, title: "Landing Pages That Convert", desc: "Pixel-perfect launches engineered for speed and conversions." },
-  { icon: Wrench, title: "Redesign & Performance Fixes", desc: "Refresh outdated interfaces and unlock faster load times." },
-  { icon: Plug, title: "API Integrations", desc: "Stripe, Supabase, OpenAI, custom REST/GraphQL _ wired in cleanly." },
-  { icon: Settings2, title: "Custom Business Tools", desc: "Internal apps and automations tailored to how your team works." },
+  { title: "Custom Web Applications", desc: "Complex SaaS products, marketplaces, and internal tools built with Django + React." },
+  { title: "API Development & Integration", desc: "RESTful APIs with Django REST Framework, third-party integrations (Stripe, OpenAI, Supabase, etc.)." },
+  { title: "eCommerce Platforms", desc: "Multi-vendor stores with custom checkout flows, order management, and analytics dashboards." },
+  { title: "Admin Dashboards", desc: "Powerful, real-time data dashboards with role-based access, powered by Django admin customizations and chart libraries." },
+  { title: "Landing Pages & Marketing Sites", desc: "High-converting, SEO-optimized pages connected to a Django CMS." },
+  { title: "System Redesign & Optimization", desc: "Migrate legacy systems to Django, improve performance, and add new features." },
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="relative py-28 md:py-36">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+    <section id="services" className="relative py-24 md:py-32">
       <div className="container">
-        <div className="max-w-2xl mb-16">
-          <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">— Services</div>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
-            High-impact <span className="text-gradient-primary">services</span>.
+        <div className="max-w-2xl mb-14">
+          <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">— What I Build</div>
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight">
+            Production-grade <span className="text-primary">software</span>.
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden border border-border">
           {services.map((s, i) => (
             <motion.div
               key={s.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="group relative glass rounded-3xl p-7 hover:border-primary/30 transition-all duration-500 hover:-translate-y-1 overflow-hidden"
+              className="group bg-white p-8 hover:bg-secondary/60 transition-colors duration-300"
             >
-              <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-primary/0 group-hover:bg-primary/10 blur-3xl transition-all duration-700" />
-              <div className="relative">
-                <div className="h-12 w-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-500">
-                  <s.icon size={22} />
-                </div>
-                <h3 className="font-display text-lg font-semibold mb-2 leading-tight">{s.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                <div className="mono text-xs text-muted-foreground/50 mt-6">
-                  0{i + 1}
-                </div>
-              </div>
+              <div className="mono text-xs text-primary/60 mb-4">0{i + 1}</div>
+              <h3 className="font-display text-xl font-semibold tracking-tight mb-3">{s.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
             </motion.div>
           ))}
         </div>

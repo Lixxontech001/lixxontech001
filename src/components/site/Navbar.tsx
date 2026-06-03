@@ -7,7 +7,7 @@ const links = [
   { href: "#why", label: "Why Me" },
   { href: "#services", label: "Services" },
   { href: "#projects", label: "Projects" },
-  { href: "#results", label: "Results" },
+  { href: "#testimonials", label: "Testimonials" },
   { href: "#about", label: "About" },
   { href: "#contact", label: "Contact" },
 ];
@@ -28,21 +28,21 @@ const Navbar = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled ? "py-3" : "py-5"
+        scrolled ? "py-2" : "py-4"
       }`}
     >
       <div className="container">
         <nav
-          className={`flex items-center justify-between rounded-full px-5 py-3 transition-all duration-500 ${
-            scrolled ? "glass-strong shadow-card" : "glass"
+          className={`flex items-center justify-between rounded-full px-5 py-2.5 border transition-all duration-500 ${
+            scrolled ? "bg-white/90 backdrop-blur border-border shadow-card" : "bg-white/70 backdrop-blur border-border/60"
           }`}
         >
-          <a href="#home" className="flex items-center gap-2 group">
-            <span className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-primary text-primary-foreground font-display font-bold text-sm shadow-glow">
+          <a href="#home" className="flex items-center gap-2 group" aria-label="Lixxon_Tech home">
+            <span className="relative flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground font-display font-bold text-sm">
               L
             </span>
             <span className="font-display font-semibold tracking-tight">
-              Lixxon<span className="text-primary">.</span>Tech
+              Lixxon<span className="text-primary">_</span>Tech
             </span>
           </a>
 
@@ -51,7 +51,7 @@ const Navbar = () => {
               <li key={l.href}>
                 <a
                   href={l.href}
-                  className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-white/5"
+                  className="px-3.5 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-secondary"
                 >
                   {l.label}
                 </a>
@@ -80,14 +80,14 @@ const Navbar = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="md:hidden mt-2 glass-strong rounded-2xl p-4 flex flex-col gap-1"
+              className="md:hidden mt-2 bg-white border border-border rounded-2xl p-3 flex flex-col gap-1 shadow-card"
             >
               {links.map((l) => (
                 <a
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="px-4 py-3 rounded-xl text-sm text-muted-foreground hover:text-foreground hover:bg-white/5"
+                  className="px-4 py-3 rounded-xl text-sm text-muted-foreground hover:text-foreground hover:bg-secondary"
                 >
                   {l.label}
                 </a>

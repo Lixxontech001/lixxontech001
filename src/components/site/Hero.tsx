@@ -1,140 +1,176 @@
-import { motion } from "framer-motion";
-import { ArrowRight, Download, Sparkles, ShieldCheck, Zap, Smartphone, TrendingUp } from "lucide-react";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, Download, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
-import portrait from "@/assets/about-portrait.jpg";
 
-const trustBadges = [
-  { icon: Smartphone, label: "Responsive Design" },
-  { icon: Zap, label: "Fast Delivery" },
-  { icon: ShieldCheck, label: "Secure Build" },
-  { icon: TrendingUp, label: "Growth Focused" },
+const stack = [
+  { name: "Django", tag: "Backend Framework" },
+  { name: "Django REST", tag: "API Layer" },
+  { name: "PostgreSQL", tag: "Database" },
+  { name: "Celery + Redis", tag: "Async Tasks" },
+  { name: "React / Next.js", tag: "Frontend" },
+  { name: "Tailwind CSS", tag: "Design System" },
+  { name: "Stripe", tag: "Payments" },
+  { name: "Docker", tag: "Deployment" },
 ];
 
 const Hero = () => {
+  const [i, setI] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => setI((v) => (v + 1) % stack.length), 1800);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0 -z-10">
-        <img
-          src={heroBg}
-          alt=""
-          aria-hidden="true"
-          width={1920}
-          height={1280}
-          className="absolute inset-0 h-full w-full object-cover opacity-60"
-        />
-        <div className="absolute inset-0 grid-pattern opacity-40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background" />
-        <div className="absolute top-1/3 -left-40 h-[500px] w-[500px] rounded-full bg-primary/20 blur-[120px] animate-pulse-glow" />
-        <div className="absolute bottom-0 right-0 h-[400px] w-[400px] rounded-full bg-primary/10 blur-[120px]" />
+        <div className="absolute inset-0 dot-pattern opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/60 to-background" />
       </div>
 
       <div className="container">
-        <div className="grid lg:grid-cols-[1.4fr_1fr] gap-12 lg:gap-16 items-center">
-          <div className="text-center lg:text-left">
+        <div className="grid lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-center">
+          <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-xs mono text-muted-foreground mb-8"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-3 py-1.5 text-xs mono text-muted-foreground mb-8"
             >
               <span className="relative flex h-2 w-2">
-                <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-75" />
+                <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-60" />
                 <span className="relative rounded-full bg-primary h-2 w-2" />
               </span>
-              Available for new projects · 2026
+              Available for freelance · 2026
             </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight"
+              className="font-display text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.02] tracking-tight text-foreground"
             >
-              <span className="text-gradient">Full Stack Web &</span>{" "}
-              <span className="text-gradient-primary">Mobile App Developer</span>{" "}
-              <span className="text-gradient">Who Builds Fast, Scalable & Revenue-Focused Digital Products</span>
+              Django Web Developer<br />
+              Who Builds <span className="text-primary">Fast, Scalable</span> &<br />
+              Revenue-Focused Digital Products
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-8 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+              className="mt-8 text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed"
             >
-              I help businesses, startups, and brands grow through modern websites,
-              mobile apps, dashboards, eCommerce platforms, and custom digital systems
-              built for performance.
+              I help startups and businesses launch complete web applications — from
+              complex backends to pixel-perfect frontends — using Django, React, and
+              modern tools.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.45 }}
-              className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-3"
+              className="mt-10 flex flex-wrap items-center gap-3"
             >
               <Button asChild variant="primary" size="lg">
                 <a href="#contact">
                   <Sparkles size={18} /> Hire Me
                 </a>
               </Button>
-              <Button asChild variant="glass" size="lg">
-                <a href="#projects">
-                  View Projects <ArrowRight className="ml-1" size={18} />
-                </a>
-              </Button>
               <Button asChild variant="ghostLine" size="lg">
-                <a href="/Olatoyosi_Ridwan_Premium_C.pdf" download="Olatoyosi_Ridwan_Premium_C.pdf">
-                  <Download size={18} /> Download CV
+                <a href="#projects">
+                  View My Work <ArrowRight size={18} />
                 </a>
               </Button>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-              className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-x-5 gap-y-3"
-            >
-              {trustBadges.map((b) => (
-                <div key={b.label} className="flex items-center gap-2 text-xs text-muted-foreground">
-                  <span className="h-7 w-7 rounded-full bg-primary/10 text-primary flex items-center justify-center">
-                    <b.icon size={13} />
-                  </span>
-                  <span className="font-medium text-foreground/80">{b.label}</span>
-                </div>
-              ))}
+              <Button asChild variant="glass" size="lg">
+                <a href="/Olatoyosi_Ridwan_Premium_C.pdf" download>
+                  <Download size={18} /> CV
+                </a>
+              </Button>
             </motion.div>
           </div>
 
-          {/* Portrait */}
+          {/* Right: animated code/architecture card */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.3 }}
-            className="relative hidden lg:block"
+            className="relative"
           >
-            <div className="absolute -inset-10 bg-primary/20 blur-[100px] rounded-full" />
-            <div className="relative glass-strong rounded-[2rem] overflow-hidden aspect-[4/5] shadow-elevated">
-              <img
-                src={portrait}
-                alt="Olatoyosi Ridwan, Lixxon Tech founder"
-                width={800}
-                height={1000}
-                className="h-full w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="mono text-xs text-primary mb-1">// founder</div>
-                <div className="font-display text-xl font-semibold">Olatoyosi Ridwan</div>
-                <div className="text-xs text-muted-foreground">Lixxon Tech</div>
+            <div className="relative glass rounded-2xl overflow-hidden shadow-elevated">
+              {/* terminal header */}
+              <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-secondary/60">
+                <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F56]" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[#FFBD2E]" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[#27C93F]" />
+                <span className="mono text-[11px] text-muted-foreground ml-2">views.py — Lixxon_Tech</span>
+              </div>
+
+              <pre className="mono text-[12.5px] leading-relaxed p-5 text-foreground/85 overflow-hidden">
+{`from rest_framework import viewsets
+from .models import Project
+from .serializers import ProjectSerializer
+
+class ProjectViewSet(viewsets.ModelViewSet):
+    """Production-ready Django API."""
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
+    permission_classes = [IsAuthenticated]
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)`}
+              </pre>
+
+              {/* live cycling stack badge */}
+              <div className="border-t border-border bg-secondary/40 px-5 py-4 flex items-center justify-between">
+                <div>
+                  <div className="mono text-[10px] uppercase tracking-widest text-muted-foreground">Now deploying</div>
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={stack[i].name}
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -8 }}
+                      transition={{ duration: 0.35 }}
+                    >
+                      <div className="font-semibold text-sm">{stack[i].name}</div>
+                      <div className="text-[11px] text-muted-foreground">{stack[i].tag}</div>
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
+                <div className="flex gap-1">
+                  {stack.map((_, k) => (
+                    <span
+                      key={k}
+                      className={`h-1.5 rounded-full transition-all ${
+                        k === i ? "w-5 bg-primary" : "w-1.5 bg-border"
+                      }`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
-            <div className="absolute -bottom-4 -left-4 glass-strong rounded-2xl px-4 py-3 shadow-card">
-              <div className="text-xs text-muted-foreground mono">Currently</div>
-              <div className="text-sm font-semibold text-primary">Open to clients</div>
-            </div>
+
+            {/* floating stat cards */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.8 }}
+              className="absolute -left-4 -bottom-6 hidden md:block glass rounded-xl px-4 py-3"
+            >
+              <div className="mono text-[10px] uppercase text-muted-foreground">Uptime</div>
+              <div className="font-bold text-lg">99.9%</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.95 }}
+              className="absolute -right-4 -top-6 hidden md:block glass rounded-xl px-4 py-3"
+            >
+              <div className="mono text-[10px] uppercase text-muted-foreground">Apps shipped</div>
+              <div className="font-bold text-lg">25+</div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
