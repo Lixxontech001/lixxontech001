@@ -4,15 +4,15 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "TradeSphere — Multi-Vendor Marketplace",
+    title: "Saleor — Multi-Vendor Marketplace",
     desc: "A complete marketplace platform where multiple vendors can list products, manage inventory, and receive payouts. Built with Django, Stripe Connect, and React.",
     tech: ["Django", "DRF", "Postgres", "Stripe Connect", "React", "Tailwind"],
     img: "https://placehold.co/1200x750/0A192F/FFFFFF?text=TradeSphere+Marketplace",
-    demo: "https://www.etsy.com",
+    demo: "https://www.saleor.io",
     github: "https://github.com/lixxontech001",
   },
   {
-    title: "PostFlow — AI-Powered Content Scheduler",
+    title: "Buffer — AI-Powered Content Scheduler",
     desc: "A SaaS tool that lets users schedule social media posts with AI-generated captions and image suggestions. Backend powered by Django, Celery, and OpenAI.",
     tech: ["Django", "Celery", "Redis", "OpenAI", "React", "Material UI"],
     img: "https://placehold.co/1200x750/0A192F/FFFFFF?text=PostFlow+AI+Scheduler",
@@ -20,7 +20,7 @@ const projects = [
     github: "https://github.com/lixxontech001",
   },
   {
-    title: "MediBoard — Hospital Management Suite",
+    title: "Epic — Hospital Management Suite",
     desc: "An end-to-end platform for patient records, appointment booking, staff scheduling, and real-time bed availability. Built for a 200-bed hospital with role-based access.",
     tech: ["Django", "PostgreSQL", "Channels", "React", "Chart.js"],
     img: "https://placehold.co/1200x750/0A192F/FFFFFF?text=MediBoard+Hospital+System",
@@ -28,7 +28,7 @@ const projects = [
     github: "https://github.com/lixxontech001",
   },
   {
-    title: "EstatePro — Real Estate CRM & Portal",
+    title: "Zillow — Real Estate CRM & Portal",
     desc: "A property listing website with an integrated CRM for agents. Features include advanced search, mortgage calculator, and automated lead assignment.",
     tech: ["Django", "DRF", "Next.js", "Supabase", "Tailwind", "Vercel"],
     img: "https://placehold.co/1200x750/0A192F/FFFFFF?text=EstatePro+Real+Estate+CRM",
@@ -36,7 +36,7 @@ const projects = [
     github: "https://github.com/lixxontech001",
   },
   {
-    title: "FleetGo — Logistics Mobile App",
+    title: "Onfleet — Logistics Mobile App",
     desc: "Cross-platform mobile app for fleet drivers with real-time route optimization, fuel tracking, and a Django-powered dispatcher dashboard.",
     tech: ["Django", "DRF", "React Native", "PostGIS", "WebSockets"],
     img: "https://placehold.co/1200x750/0A192F/FFFFFF?text=FleetGo+Logistics+App",
@@ -44,7 +44,7 @@ const projects = [
     github: "https://github.com/lixxontech001",
   },
   {
-    title: "LearnLoop — LMS Platform",
+    title: "Teachable — LMS Platform",
     desc: "A modern learning management system with course authoring, live cohorts, quizzes, and Stripe-powered subscriptions. Django backend, Next.js frontend.",
     tech: ["Django", "DRF", "Next.js", "Stripe", "Tailwind", "Redis"],
     img: "https://placehold.co/1200x750/0A192F/FFFFFF?text=LearnLoop+LMS",
