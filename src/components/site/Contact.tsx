@@ -94,7 +94,7 @@ const Contact = () => {
                     </a>
                   </Button>
                   <Button asChild variant="glass" size="sm" className="w-full">
-                    <a href="/Olatoyosi_Ridwan_Premium_C.pdf" download>
+                    <a href="/Olatoyosi_Ridwan_Django_CV.pdf" download>
                       <FileText size={14} /> CV
                     </a>
                   </Button>
