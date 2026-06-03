@@ -1,60 +1,54 @@
 import { motion } from "framer-motion";
-import { Quote, Star } from "lucide-react";
+import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote:
-      "Lixxon Tech delivered a website that exceeded our expectations. Fast, beautiful, and built to convert from day one.",
+    quote: "Lixxon Tech delivered a website that exceeded our expectations. Fast, beautiful, and built to convert from day one.",
     name: "Arslan Conlan",
-    role: "Founder, SaaS Startup",
+    role: "Founder",
   },
   {
-    quote:
-      "The mobile app he built for us is exactly what our customers needed. Smooth, premium and reliable.",
+    quote: "The mobile app he built for us is exactly what our customers needed. Smooth, premium and reliable.",
     name: "Scarlett Johansson",
-    role: "Operations Lead, eCommerce",
+    role: "Operations Lead",
   },
   {
-    quote:
-      "Clear communication, on-time delivery, and a polished final product. We'd hire him again in a heartbeat.",
+    quote: "Clear communication, on-time delivery, and a polished final product. We'd hire him again in a heartbeat.",
     name: "Edward Jones",
-    role: "CEO, Agency",
+    role: "CEO",
   },
 ];
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="relative py-28 md:py-36">
+    <section id="testimonials" className="relative py-24 md:py-32">
       <div className="container">
-        <div className="max-w-2xl mb-16">
+        <div className="max-w-2xl mb-14">
           <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">— Testimonials</div>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
-            Trusted by <span className="text-gradient-primary">ambitious teams</span>.
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight">
+            Trusted by <span className="text-primary">founders & teams</span>.
           </h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-5">
           {testimonials.map((t, i) => (
-            <motion.div
+            <motion.figure
               key={i}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="relative glass rounded-3xl p-8 hover:border-primary/30 transition-all duration-500"
+              className="bg-white rounded-2xl p-8 border border-border hover:border-primary/40 transition-colors"
             >
-              <Quote className="text-primary/30 mb-4" size={36} />
-              <div className="flex gap-1 mb-4">
-                {Array.from({ length: 5 }).map((_, k) => (
-                  <Star key={k} size={14} className="fill-primary text-primary" />
-                ))}
-              </div>
-              <p className="text-foreground/90 leading-relaxed text-base">"{t.quote}"</p>
-              <div className="mt-6 pt-6 border-t border-border/50">
-                <div className="font-display font-semibold">{t.name}</div>
+              <Quote className="text-primary/30" size={32} strokeWidth={1.5} />
+              <blockquote className="text-foreground/90 leading-relaxed text-[15px] mt-5">
+                "{t.quote}"
+              </blockquote>
+              <figcaption className="mt-7 pt-6 border-t border-border">
+                <div className="font-semibold">{t.name}</div>
                 <div className="text-xs text-muted-foreground mono mt-1">{t.role}</div>
-              </div>
-            </motion.div>
+              </figcaption>
+            </motion.figure>
           ))}
         </div>
       </div>

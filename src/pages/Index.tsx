@@ -4,9 +4,8 @@ import Hero from "@/components/site/Hero";
 import WhyMe from "@/components/site/WhyMe";
 import Services from "@/components/site/Services";
 import Projects from "@/components/site/Projects";
-import Results from "@/components/site/Results";
-import About from "@/components/site/About";
 import Testimonials from "@/components/site/Testimonials";
+import About from "@/components/site/About";
 import Contact from "@/components/site/Contact";
 import Footer from "@/components/site/Footer";
 
@@ -18,10 +17,11 @@ const Index = () => {
       "@context": "https://schema.org",
       "@type": "Person",
       name: "Olatoyosi Ridwan",
-      jobTitle: "Full Stack Web & Mobile App Developer",
-      worksFor: { "@type": "Organization", name: "Lixxon Tech" },
+      jobTitle: "Django Full-Stack Web Developer",
+      worksFor: { "@type": "Organization", name: "Lixxon_Tech" },
       email: "mailto:lixxontech@gmail.com",
       url: typeof window !== "undefined" ? window.location.origin : "",
+      sameAs: ["https://github.com/lixxontech001"],
     });
     document.head.appendChild(ld);
     return () => {
@@ -30,15 +30,14 @@ const Index = () => {
   }, []);
 
   return (
-    <main className="relative min-h-screen overflow-x-hidden">
+    <main className="relative min-h-screen overflow-x-hidden bg-background">
       <Navbar />
       <Hero />
       <WhyMe />
       <Services />
       <Projects />
-      <Results />
-      <About />
       <Testimonials />
+      <About />
       <Contact />
       <Footer />
     </main>
