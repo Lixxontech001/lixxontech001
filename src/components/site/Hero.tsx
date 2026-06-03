@@ -84,7 +84,7 @@ const Hero = () => {
                 </a>
               </Button>
               <Button asChild variant="glass" size="lg">
-                <a href="/Olatoyosi_Ridwan_Premium_C.pdf" download>
+                <a href="/Olatoyosi_Ridwan_Django_CV.pdf" download>
                   <Download size={18} /> CV
                 </a>
               </Button>
