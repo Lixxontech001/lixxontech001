@@ -137,3 +137,22 @@
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
+/* Respect users who prefer reduced motion across CSS animations & transitions */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus-visible ring for keyboard users */
+:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+  border-radius: 6px;
+}

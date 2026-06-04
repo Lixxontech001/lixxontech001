@@ -1,13 +1,5 @@
 import { motion } from "framer-motion";
-
-const services = [
-  { title: "Custom Web Applications", desc: "Complex SaaS products, marketplaces, and internal tools built with Django + React." },
-  { title: "API Development & Integration", desc: "RESTful APIs with Django REST Framework, third-party integrations (Stripe, OpenAI, Supabase, etc.)." },
-  { title: "eCommerce Platforms", desc: "Multi-vendor stores with custom checkout flows, order management, and analytics dashboards." },
-  { title: "Admin Dashboards", desc: "Powerful, real-time data dashboards with role-based access, powered by Django admin customizations and chart libraries." },
-  { title: "Landing Pages & Marketing Sites", desc: "High-converting, SEO-optimized pages connected to a Django CMS." },
-  { title: "System Redesign & Optimization", desc: "Migrate legacy systems to Django, improve performance, and add new features." },
-];
+import { services } from "@/content/site";
 
 const Services = () => {
   return (
