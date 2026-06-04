@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Navbar from "@/components/site/Navbar";
 import Hero from "@/components/site/Hero";
 import WhyMe from "@/components/site/WhyMe";
@@ -8,39 +7,30 @@ import Testimonials from "@/components/site/Testimonials";
 import About from "@/components/site/About";
 import Contact from "@/components/site/Contact";
 import Footer from "@/components/site/Footer";
+import SEO from "@/components/site/SEO";
 
 const Index = () => {
-  useEffect(() => {
-    const ld = document.createElement("script");
-    ld.type = "application/ld+json";
-    ld.text = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: "Olatoyosi Ridwan",
-      jobTitle: "Django Full-Stack Web Developer",
-      worksFor: { "@type": "Organization", name: "Lixxon_Tech" },
-      email: "mailto:lixxontech@gmail.com",
-      url: typeof window !== "undefined" ? window.location.origin : "",
-      sameAs: ["https://github.com/lixxontech001"],
-    });
-    document.head.appendChild(ld);
-    return () => {
-      document.head.removeChild(ld);
-    };
-  }, []);
-
   return (
-    <main className="relative min-h-screen overflow-x-hidden bg-background">
+    <>
+      <SEO />
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-full focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:text-sm focus:shadow-elevated"
+      >
+        Skip to content
+      </a>
       <Navbar />
-      <Hero />
-      <WhyMe />
-      <Services />
-      <Projects />
-      <Testimonials />
-      <About />
-      <Contact />
+      <main id="main" className="relative min-h-screen overflow-x-hidden bg-background">
+        <Hero />
+        <WhyMe />
+        <Services />
+        <Projects />
+        <Testimonials />
+        <About />
+        <Contact />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 };
 
