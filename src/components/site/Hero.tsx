@@ -62,8 +62,8 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mt-8 text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed"
             >
-              I help startups and businesses launch complete web applications — from
-              complex backends to pixel-perfect frontends — using Django, React, and
+              I help startups and businesses launch complete web applications from
+              complex backends to pixel-perfect frontends using Django, React, and
               modern tools.
             </motion.p>
 
