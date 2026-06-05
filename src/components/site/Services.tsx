@@ -20,7 +20,7 @@ const Services = () => {
             </h2>
           </div>
           <p className="text-muted-foreground max-w-sm">
-            Six service tracks, one engineer, end-to-end ownership. Pick a starting point — I'll scope the rest with you on a free 30-min call.
+            Six service tracks, one engineer, end-to-end ownership. Pick a starting point... I'll scope the rest with you on a free 30-min call.
           </p>
         </div>
 
