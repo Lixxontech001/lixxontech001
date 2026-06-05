@@ -3,7 +3,7 @@ import { Database, Layers, Zap, ShieldCheck, Code2, MessageSquare } from "lucide
 
 const reasons = [
   { icon: Database, title: "Django Expertise", desc: "Deep mastery of Django ORM, DRF, Channels, and deployment. Production backends that scale to millions of requests." },
-  { icon: Layers, title: "Full-Stack Delivery", desc: "One engineer, entire stack. Backend, frontend, APIs, databases, infra — I own the outcome." },
+  { icon: Layers, title: "Full-Stack Delivery", desc: "One engineer, entire stack. Backend, frontend, APIs, databases, infra I own the outcome." },
   { icon: Zap, title: "Rapid Prototyping", desc: "Django's batteries-included philosophy lets me ship validated MVPs in weeks, not months." },
   { icon: ShieldCheck, title: "Secure & Reliable", desc: "OWASP-aligned auth, audit logs, and data protection — backed by cybersecurity coursework at LAUTECH." },
   { icon: Code2, title: "Clean Maintainable Code", desc: "PEP8 + type hints + pytest + CI. Your future team will thank you for the codebase you inherit." },
