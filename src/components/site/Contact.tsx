@@ -52,13 +52,13 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7 }}
-          className="relative bg-white border border-border rounded-3xl p-6 sm:p-10 md:p-14 shadow-elevated overflow-hidden"
+          className="relative glass-strong rounded-3xl p-6 sm:p-10 md:p-14 overflow-hidden"
         >
           <div className="relative grid lg:grid-cols-[1fr_1.2fr] gap-10 lg:gap-16 items-start">
             <div>
               <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">— Contact</div>
               <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight">
-                Let's build something <span className="text-primary">great</span>.
+                Let's build something <span className="text-gradient-primary">great</span>.
               </h2>
               <p className="mt-6 text-muted-foreground leading-relaxed">
                 Tell me about your project and I'll respond within 24 hours with next steps.

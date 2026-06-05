@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 const links = [
   { href: "#why", label: "Why Me" },
   { href: "#services", label: "Services" },
-  { href: "#projects", label: "Projects" },
-  { href: "#testimonials", label: "Testimonials" },
+  { href: "#projects", label: "Work" },
+  { href: "#testimonials", label: "Clients" },
   { href: "#about", label: "About" },
   { href: "#contact", label: "Contact" },
 ];
@@ -27,18 +27,18 @@ const Navbar = () => {
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled ? "py-2" : "py-4"
-      }`}
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? "py-2" : "py-4"}`}
     >
       <div className="container">
         <nav
           className={`flex items-center justify-between rounded-full px-5 py-2.5 border transition-all duration-500 ${
-            scrolled ? "bg-white/90 backdrop-blur border-border shadow-card" : "bg-white/70 backdrop-blur border-border/60"
+            scrolled
+              ? "bg-background/80 backdrop-blur-xl border-border shadow-elevated"
+              : "glass border-white/5"
           }`}
         >
           <a href="#home" className="flex items-center gap-2 group" aria-label="Lixxon_Tech home">
-            <span className="relative flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground font-display font-bold text-sm">
+            <span className="relative flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-primary to-primary-glow text-primary-foreground font-display font-bold text-sm shadow-glow">
               L
             </span>
             <span className="font-display font-semibold tracking-tight">
@@ -80,7 +80,7 @@ const Navbar = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="md:hidden mt-2 bg-white border border-border rounded-2xl p-3 flex flex-col gap-1 shadow-card"
+              className="md:hidden mt-2 glass-strong rounded-2xl p-3 flex flex-col gap-1"
             >
               {links.map((l) => (
                 <a

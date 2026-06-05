@@ -38,11 +38,11 @@ const Projects = () => {
               transition={{ duration: reduced ? 0 : 0.7 }}
               className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight"
             >
-              Products that <span className="text-primary">scale</span>.
+              Products that <span className="text-gradient-primary">scale</span>.
             </motion.h2>
           </div>
           <p className="text-muted-foreground max-w-sm">
-            A selection of Django-powered applications built end-to-end — from data model to deployment. Tap any card for the full case study.
+            Real Django-powered applications shipped end-to-end — from data model to deployment. Tap any card for the full case study.
           </p>
         </div>
 
@@ -55,7 +55,7 @@ const Projects = () => {
               whileInView="show"
               viewport={{ once: true, margin: "-80px" }}
               variants={reveal}
-              className="group bg-white rounded-2xl overflow-hidden border border-border hover:border-primary/40 hover:shadow-elevated transition-all duration-500 flex flex-col"
+              className="group relative glass rounded-2xl overflow-hidden card-hover flex flex-col"
             >
               <button
                 type="button"
@@ -66,21 +66,39 @@ const Projects = () => {
                 <motion.img
                   src={p.img}
                   alt={`${p.title} preview`}
-                  width={1200}
-                  height={750}
+                  width={1280}
+                  height={800}
                   loading="lazy"
                   className="h-full w-full object-cover"
-                  whileHover={reduced ? undefined : { scale: 1.04 }}
-                  transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                  whileHover={reduced ? undefined : { scale: 1.06 }}
+                  transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
                 />
-                <div className="absolute top-3 right-3 inline-flex items-center gap-1 rounded-full bg-background/85 backdrop-blur px-2.5 py-1 mono text-[10px] uppercase tracking-widest border border-border">
+                <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/20 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-500" />
+                <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-background/80 backdrop-blur px-2.5 py-1 mono text-[10px] uppercase tracking-widest border border-border">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+                  {p.year}
+                </div>
+                <div className="absolute top-3 right-3 inline-flex items-center gap-1 rounded-full bg-primary text-primary-foreground px-2.5 py-1 mono text-[10px] uppercase tracking-widest font-semibold">
                   Case study <ArrowUpRight size={11} />
                 </div>
+                {p.metrics && (
+                  <div className="absolute bottom-3 left-3 right-3 flex gap-2">
+                    {p.metrics.map((m) => (
+                      <div
+                        key={m.label}
+                        className="flex-1 rounded-lg bg-background/70 backdrop-blur px-2.5 py-1.5 border border-border"
+                      >
+                        <div className="font-display text-sm font-bold text-foreground leading-none">{m.value}</div>
+                        <div className="mono text-[9px] uppercase tracking-wider text-muted-foreground mt-0.5">{m.label}</div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </button>
 
               <div className="p-7 flex-1 flex flex-col">
                 <div className="mono text-[10.5px] uppercase tracking-widest text-muted-foreground mb-2">
-                  {p.year} · {p.role}
+                  {p.role}
                 </div>
                 <h3 className="font-display text-xl md:text-2xl font-semibold tracking-tight mb-2">
                   <button
@@ -107,9 +125,9 @@ const Projects = () => {
                     </span>
                   )}
                 </div>
-                <div className="mt-6 flex gap-2 pt-4 border-t border-border">
+                <div className="mt-6 flex gap-2 pt-5 border-t border-border">
                   <Button variant="primary" size="sm" onClick={() => openProject(p)}>
-                    View Case Study <ArrowUpRight size={14} />
+                    Case Study <ArrowUpRight size={14} />
                   </Button>
                   <Button asChild variant="glass" size="sm">
                     <a

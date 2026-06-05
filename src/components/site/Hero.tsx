@@ -36,7 +36,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-3 py-1.5 text-xs mono text-muted-foreground mb-8"
+              className="inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 text-xs mono text-muted-foreground mb-8"
             >
               <span className="relative flex h-2 w-2">
                 <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-60" />
@@ -49,11 +49,11 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="font-display text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.02] tracking-tight text-foreground"
+              className="font-display text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.02] tracking-tight"
             >
-              Django Web Developer<br />
-              Who Builds <span className="text-primary">Fast, Scalable</span> &<br />
-              Revenue-Focused Digital Products
+              <span className="text-gradient">Django Web Developer</span><br />
+              Who Ships <span className="text-gradient-primary">Fast, Scalable</span><br />
+              Revenue-Driving Products
             </motion.h1>
 
             <motion.p

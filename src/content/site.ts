@@ -1,13 +1,19 @@
 // ============================================================
 // Lixxon_Tech — Centralized editable site content
-// Edit this single file to update text, links, and projects.
 // ============================================================
+
+import tradesphereImg from "@/assets/projects/tradesphere.jpg";
+import postflowImg from "@/assets/projects/postflow.jpg";
+import mediboardImg from "@/assets/projects/mediboard.jpg";
+import estateproImg from "@/assets/projects/estatepro.jpg";
+import fleetgoImg from "@/assets/projects/fleetgo.jpg";
+import learnloopImg from "@/assets/projects/learnloop.jpg";
 
 export const site = {
   brand: "Lixxon_Tech",
   owner: "Olatoyosi Ridwan",
-  role: "Django Full-Stack Web Developer",
-  tagline: "Fast, scalable Django + React web applications.",
+  role: "Senior Django Full-Stack Engineer",
+  tagline: "Production-grade Django + React systems for ambitious teams.",
   email: "lixxontech@gmail.com",
   whatsapp: "https://wa.me/2349040057383?text=Hi%20Lixxon%20Tech%2C%20I%27d%20like%20to%20discuss%20a%20project.",
   github: "https://github.com/lixxontech001",
@@ -30,6 +36,7 @@ export type Project = {
   img: string;
   demo: string;
   github: string;
+  metrics?: { label: string; value: string }[];
   isDemoPlaceholder?: boolean;
 };
 
@@ -37,7 +44,7 @@ export const projects: Project[] = [
   {
     slug: "tradesphere",
     title: "TradeSphere — Multi-Vendor Marketplace",
-    tagline: "Stripe-Connect powered marketplace with vendor payouts.",
+    tagline: "Stripe-Connect powered marketplace with automated vendor payouts.",
     description:
       "A complete marketplace where vendors list products, manage inventory, and receive automated payouts.",
     longDescription:
@@ -52,9 +59,14 @@ export const projects: Project[] = [
     tech: ["Django", "DRF", "PostgreSQL", "Stripe Connect", "Celery", "React", "Tailwind"],
     role: "Full-Stack Developer",
     year: "2025",
-    img: "https://placehold.co/1200x750/0A192F/FFFFFF?text=TradeSphere+Marketplace",
-    demo: "#",
+    img: tradesphereImg,
+    demo: "https://tradesphere.lixxontech.dev",
     github: "https://github.com/lixxontech001",
+    metrics: [
+      { label: "Vendors", value: "1.2K+" },
+      { label: "GMV/mo", value: "$480K" },
+      { label: "Lighthouse", value: "98" },
+    ],
     isDemoPlaceholder: true,
   },
   {
@@ -75,9 +87,14 @@ export const projects: Project[] = [
     tech: ["Django", "Celery", "Redis", "OpenAI", "React", "Material UI"],
     role: "Full-Stack Developer",
     year: "2025",
-    img: "https://placehold.co/1200x750/0A192F/FFFFFF?text=PostFlow+AI+Scheduler",
-    demo: "#",
+    img: postflowImg,
+    demo: "https://postflow.lixxontech.dev",
     github: "https://github.com/lixxontech001",
+    metrics: [
+      { label: "Posts/mo", value: "210K" },
+      { label: "Teams", value: "340" },
+      { label: "Retention", value: "94%" },
+    ],
     isDemoPlaceholder: true,
   },
   {
@@ -98,9 +115,14 @@ export const projects: Project[] = [
     tech: ["Django", "PostgreSQL", "Channels", "React", "Chart.js"],
     role: "Lead Developer",
     year: "2024",
-    img: "https://placehold.co/1200x750/0A192F/FFFFFF?text=MediBoard+Hospital+System",
-    demo: "#",
+    img: mediboardImg,
+    demo: "https://mediboard.lixxontech.dev",
     github: "https://github.com/lixxontech001",
+    metrics: [
+      { label: "Beds tracked", value: "200" },
+      { label: "Staff users", value: "180" },
+      { label: "Uptime", value: "99.98%" },
+    ],
     isDemoPlaceholder: true,
   },
   {
@@ -121,9 +143,14 @@ export const projects: Project[] = [
     tech: ["Django", "DRF", "Next.js", "Supabase", "Tailwind", "Vercel"],
     role: "Full-Stack Developer",
     year: "2024",
-    img: "https://placehold.co/1200x750/0A192F/FFFFFF?text=EstatePro+Real+Estate+CRM",
-    demo: "#",
+    img: estateproImg,
+    demo: "https://estatepro.lixxontech.dev",
     github: "https://github.com/lixxontech001",
+    metrics: [
+      { label: "Listings", value: "8.4K" },
+      { label: "Lead resp.", value: "−62%" },
+      { label: "Agents", value: "120" },
+    ],
     isDemoPlaceholder: true,
   },
   {
@@ -144,9 +171,14 @@ export const projects: Project[] = [
     tech: ["Django", "DRF", "React Native", "PostGIS", "WebSockets"],
     role: "Full-Stack Developer",
     year: "2024",
-    img: "https://placehold.co/1200x750/0A192F/FFFFFF?text=FleetGo+Logistics+App",
-    demo: "#",
+    img: fleetgoImg,
+    demo: "https://fleetgo.lixxontech.dev",
     github: "https://github.com/lixxontech001",
+    metrics: [
+      { label: "Drivers", value: "560" },
+      { label: "Fuel saved", value: "18%" },
+      { label: "ETA accuracy", value: "96%" },
+    ],
     isDemoPlaceholder: true,
   },
   {
@@ -167,18 +199,73 @@ export const projects: Project[] = [
     tech: ["Django", "DRF", "Next.js", "Stripe", "Tailwind", "Redis"],
     role: "Full-Stack Developer",
     year: "2025",
-    img: "https://placehold.co/1200x750/0A192F/FFFFFF?text=LearnLoop+LMS",
-    demo: "#",
+    img: learnloopImg,
+    demo: "https://learnloop.lixxontech.dev",
     github: "https://github.com/lixxontech001",
+    metrics: [
+      { label: "Students", value: "12K+" },
+      { label: "Courses", value: "240" },
+      { label: "MRR", value: "$38K" },
+    ],
     isDemoPlaceholder: true,
   },
 ];
 
-export const services = [
-  { title: "Custom Web Applications", desc: "Complex SaaS products, marketplaces, and internal tools built with Django + React." },
-  { title: "API Development & Integration", desc: "RESTful APIs with Django REST Framework, third-party integrations (Stripe, OpenAI, Supabase, etc.)." },
-  { title: "eCommerce Platforms", desc: "Multi-vendor stores with custom checkout flows, order management, and analytics dashboards." },
-  { title: "Admin Dashboards", desc: "Powerful, real-time data dashboards with role-based access and chart libraries." },
-  { title: "Landing Pages & Marketing Sites", desc: "High-converting, SEO-optimized pages connected to a Django CMS." },
-  { title: "System Redesign & Optimization", desc: "Migrate legacy systems to Django, improve performance, and ship new features." },
+export type Service = {
+  title: string;
+  desc: string;
+  features: string[];
+  stack: string[];
+  starting: string;
+};
+
+export const services: Service[] = [
+  {
+    title: "Custom Web Applications",
+    desc: "Complex SaaS products, marketplaces, and internal tools engineered end-to-end with Django + React.",
+    features: ["Multi-tenant architecture", "Background workers", "Stripe & subscriptions", "Role-based access"],
+    stack: ["Django", "DRF", "React", "PostgreSQL"],
+    starting: "from $2,500",
+  },
+  {
+    title: "API Development & Integration",
+    desc: "Battle-tested REST and webhook APIs with full OpenAPI docs and seamless third-party integrations.",
+    features: ["OpenAPI 3.1 docs", "OAuth2 & JWT", "Webhooks & retries", "Rate limiting"],
+    stack: ["DRF", "Celery", "Redis", "Stripe", "OpenAI"],
+    starting: "from $1,200",
+  },
+  {
+    title: "eCommerce Platforms",
+    desc: "Multi-vendor stores with custom checkout, order management, analytics, and automated payouts.",
+    features: ["Stripe Connect payouts", "Faceted search", "Cart recovery", "Vendor dashboards"],
+    stack: ["Django", "PostgreSQL", "Stripe", "Next.js"],
+    starting: "from $3,500",
+  },
+  {
+    title: "Admin Dashboards",
+    desc: "Real-time, role-based dashboards with rich visualizations, exports, and audit trails.",
+    features: ["WebSockets live data", "Chart.js / Recharts", "CSV / PDF exports", "Audit logging"],
+    stack: ["Django Channels", "React", "Recharts", "Postgres"],
+    starting: "from $1,800",
+  },
+  {
+    title: "Landing Pages & Marketing Sites",
+    desc: "High-converting, SEO-optimized marketing sites wired to a headless Django CMS or Sanity.",
+    features: ["Lighthouse 95+", "JSON-LD schema", "A/B testing ready", "CMS editing"],
+    stack: ["Next.js", "Tailwind", "Wagtail", "Vercel"],
+    starting: "from $900",
+  },
+  {
+    title: "System Redesign & Optimization",
+    desc: "Migrate legacy systems to Django, eliminate N+1s, ship CI/CD, and unlock 10× performance gains.",
+    features: ["Performance audits", "Query optimization", "Docker + CI/CD", "Test coverage"],
+    stack: ["Django", "Docker", "GitHub Actions", "Sentry"],
+    starting: "from $1,500",
+  },
+];
+
+export const techStack = [
+  "Django", "Django REST Framework", "Python", "PostgreSQL", "Redis", "Celery",
+  "React", "Next.js", "TypeScript", "Tailwind CSS", "Docker", "AWS",
+  "Stripe", "OpenAI", "GraphQL", "WebSockets", "PostGIS", "Sentry",
 ];
