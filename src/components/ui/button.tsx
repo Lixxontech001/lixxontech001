@@ -16,9 +16,9 @@ const buttonVariants = cva(
         ghost: "hover:bg-secondary hover:text-foreground rounded-full",
         link: "text-primary underline-offset-4 hover:underline",
         primary:
-          "rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 hover:-translate-y-0.5 transition-all duration-300 shadow-card",
+          "rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 hover:-translate-y-0.5 transition-all duration-300 shadow-glow",
         glass:
-          "rounded-full bg-white text-foreground border border-border hover:border-primary/40 hover:bg-secondary transition-all duration-300",
+          "rounded-full bg-white/5 text-foreground border border-white/10 hover:border-primary/40 hover:bg-white/10 backdrop-blur transition-all duration-300",
         ghostLine:
           "rounded-full border border-border text-foreground hover:border-primary hover:text-primary transition-all duration-300 bg-transparent",
       },

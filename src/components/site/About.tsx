@@ -23,7 +23,7 @@ const About = () => {
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-5 -right-5 bg-white border border-border rounded-xl px-5 py-3 shadow-card hidden md:block">
+            <div className="absolute -bottom-5 -right-5 glass-strong rounded-xl px-5 py-3 hidden md:block">
               <div className="mono text-[10px] uppercase tracking-widest text-muted-foreground">Based in</div>
               <div className="font-semibold">Nigeria · Anywhere</div>
             </div>
@@ -37,7 +37,7 @@ const About = () => {
           >
             <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">— About Me</div>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight">
-              Engineering systems that are <span className="text-primary">secure & scalable</span>.
+              Engineering systems that are <span className="text-gradient-primary">secure & scalable</span>.
             </h2>
             <p className="mt-8 text-muted-foreground text-lg leading-relaxed">
               I'm <span className="text-foreground font-medium">Olatoyosi Ridwan</span>, the
