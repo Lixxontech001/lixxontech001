@@ -94,7 +94,7 @@ const ProjectDialog = ({ project, open, onOpenChange }: Props) => {
             <div className="mt-7 flex items-start gap-2.5 rounded-xl border border-border bg-secondary/60 p-3.5 text-xs text-muted-foreground">
               <Info size={14} className="mt-0.5 text-primary shrink-0" />
               <span>
-                Live demo is a placeholder. The deployed client build is private — request a walkthrough via the contact form.
+                Live demo is a placeholder that looks just like the project. The deployed client build is private .... request a walkthrough via the contact form.
               </span>
             </div>
           )}
