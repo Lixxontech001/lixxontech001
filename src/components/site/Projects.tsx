@@ -95,12 +95,7 @@ const Projects = () => {
                   </div>
                 )}
               </button>
-               <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
-                 <p className="text-sm text-muted-foreground">Wanna see more? I can show you more</p>
-                 <Button asChild variant="primary" size="sm">
-                   <a href="#contact">Ask Me <ArrowUpRight size={14} /></a>
-                </Button>
-               </div>
+               
               <div className="p-7 flex-1 flex flex-col">
                 <div className="mono text-[10.5px] uppercase tracking-widest text-muted-foreground mb-2">
                   {p.role}
@@ -164,6 +159,12 @@ const Projects = () => {
               </div>
             </motion.article>
           ))}
+        </div>
+        <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
+          <p className="text-sm text-muted-foreground">Wanna see more? I can show you more</p>
+          <Button asChild variant="primary" size="sm">
+            <a href="#contact">Ask Me <ArrowUpRight size={14} /></a>
+          </Button>
         </div>
       </div>
 
