@@ -3,13 +3,13 @@ import { Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Olatoyosi delivered a Django backend that handles 5× our previous load — and shipped it two weeks early. He's the kind of engineer you build a company around.",
+    quote: "Lixxon_Tech delivered a Django backend that handles 5× our previous load and shipped it two weeks early. He's the kind of engineer you build a company around.",
     name: "Arslan Conlan",
     role: "Founder, TradeSphere",
     initial: "AC",
   },
   {
-    quote: "We hired Lixxon Tech to rebuild our hospital management system. The result is faster, more secure, and our staff actually enjoys using it. Outstanding work.",
+    quote: "We hired Lixxon_Tech to rebuild our hospital management system. The result is faster, more secure, and our staff actually enjoys using it. Outstanding work.",
     name: "Dr. Scarlett Johansson",
     role: "Operations Director, MediBoard",
     initial: "SJ",
