@@ -25,7 +25,7 @@ const About = () => {
             </div>
             <div className="absolute -bottom-5 -right-5 glass-strong rounded-xl px-5 py-3 hidden md:block">
               <div className="mono text-[10px] uppercase tracking-widest text-muted-foreground">Based in</div>
-              <div className="font-semibold">Nigeria · Anywhere</div>
+              <div className="font-semibold">Nigeria · Remote worldwide</div>
             </div>
           </motion.div>
 
