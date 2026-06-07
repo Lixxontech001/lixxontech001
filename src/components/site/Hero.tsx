@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Download, Sparkles } from "lucide-react";
+import { ArrowRight, Download, Sparkles, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const stack = [
@@ -11,31 +11,44 @@ const stack = [
   { name: "React / Next.js", tag: "Frontend" },
   { name: "Tailwind CSS", tag: "Design System" },
   { name: "Stripe", tag: "Payments" },
-  { name: "Docker", tag: "Deployment" },
+  { name: "Docker / AWS", tag: "Deployment" },
 ];
+
+const container = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } },
+};
+const item = {
+  hidden: { opacity: 0, y: 22 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const } },
+};
 
 const Hero = () => {
   const [i, setI] = useState(0);
 
   useEffect(() => {
-    const id = setInterval(() => setI((v) => (v + 1) % stack.length), 1800);
+    const id = setInterval(() => setI((v) => (v + 1) % stack.length), 1700);
     return () => clearInterval(id);
   }, []);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
+      <div className="aurora" aria-hidden />
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 dot-pattern opacity-60" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/60 to-background" />
+        <div className="absolute inset-0 dot-pattern opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
       </div>
 
       <div className="container">
-        <div className="grid lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-center">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="show"
+          className="grid lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-center"
+        >
           <div>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              variants={item}
               className="inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 text-xs mono text-muted-foreground mb-8"
             >
               <span className="relative flex h-2 w-2">
@@ -43,34 +56,35 @@ const Hero = () => {
                 <span className="relative rounded-full bg-primary h-2 w-2" />
               </span>
               Available for freelance · 2026
+              <span className="opacity-40">·</span>
+              <span className="flex items-center gap-0.5">
+                {Array.from({ length: 5 }).map((_, k) => (
+                  <Star key={k} size={10} className="fill-primary text-primary" />
+                ))}
+              </span>
+              <span>5.0 rating</span>
             </motion.div>
 
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
+              variants={item}
               className="font-display text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.02] tracking-tight"
             >
-              <span className="text-gradient">Django Web Developer</span><br />
-              Who Ships <span className="text-gradient-primary">Fast, Scalable</span><br />
-              Revenue-Driving Products
+              <span className="text-gradient">Senior Django Engineer</span><br />
+              shipping <span className="text-gradient-primary animate-gradient">production-grade</span><br />
+              software for ambitious teams.
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              variants={item}
               className="mt-8 text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed"
             >
-              I help startups and businesses launch complete web applications from
-              complex backends to pixel-perfect frontends using Django, React, and
-              modern tools.
+              I'm <span className="text-foreground font-medium">Olatoyosi Ridwan</span> — I build SaaS,
+              marketplaces, dashboards and APIs end-to-end with Django, React and AI. Honest scopes,
+              weekly demos, code you actually own.
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.45 }}
+              variants={item}
               className="mt-10 flex flex-wrap items-center gap-3"
             >
               <Button asChild variant="primary" size="lg">
@@ -89,17 +103,36 @@ const Hero = () => {
                 </a>
               </Button>
             </motion.div>
+
+            <motion.dl
+              variants={item}
+              className="mt-12 grid grid-cols-3 gap-6 max-w-md border-t border-border pt-6"
+            >
+              {[
+                { k: "Projects", v: "10+" },
+                { k: "Years", v: "4+" },
+                { k: "Uptime", v: "99.9%" },
+              ].map((s) => (
+                <div key={s.k}>
+                  <dt className="mono text-[10px] uppercase tracking-widest text-muted-foreground">{s.k}</dt>
+                  <dd className="font-display text-2xl md:text-3xl font-bold mt-1 text-gradient">{s.v}</dd>
+                </div>
+              ))}
+            </motion.dl>
           </div>
 
           {/* Right: animated code/architecture card */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.3 }}
+            initial={{ opacity: 0, scale: 0.94, y: 30 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <div className="relative glass rounded-2xl overflow-hidden shadow-elevated">
-              {/* terminal header */}
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="relative glass-strong rounded-2xl overflow-hidden shimmer-border"
+            >
               <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-secondary/60">
                 <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F56]" />
                 <span className="h-2.5 w-2.5 rounded-full bg-[#FFBD2E]" />
@@ -122,7 +155,6 @@ class ProjectViewSet(viewsets.ModelViewSet):
         serializer.save(owner=self.request.user)`}
               </pre>
 
-              {/* live cycling stack badge */}
               <div className="border-t border-border bg-secondary/40 px-5 py-4 flex items-center justify-between">
                 <div>
                   <div className="mono text-[10px] uppercase tracking-widest text-muted-foreground">Now deploying</div>
@@ -150,13 +182,12 @@ class ProjectViewSet(viewsets.ModelViewSet):
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            {/* floating stat cards */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.8 }}
+              transition={{ delay: 1 }}
               className="absolute -left-4 -bottom-6 hidden md:block glass rounded-xl px-4 py-3"
             >
               <div className="mono text-[10px] uppercase text-muted-foreground">Uptime</div>
@@ -165,14 +196,14 @@ class ProjectViewSet(viewsets.ModelViewSet):
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.95 }}
+              transition={{ delay: 1.15 }}
               className="absolute -right-4 -top-6 hidden md:block glass rounded-xl px-4 py-3"
             >
               <div className="mono text-[10px] uppercase text-muted-foreground">Apps shipped</div>
-              <div className="font-bold text-lg">25+</div>
+              <div className="font-bold text-lg">10+</div>
             </motion.div>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
