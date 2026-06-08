@@ -8,7 +8,7 @@ import { site, projects } from "@/content/site";
 const SEO = () => {
   useEffect(() => {
     const title = `${site.brand} | ${site.role}`;
-    const description = `${site.owner} — ${site.tagline} Available for freelance Django & React engagements.`;
+    const description = `${site.owner}. ${site.tagline} Available for freelance Django and React engagements.`;
     const url = typeof window !== "undefined" ? window.location.origin : "/";
 
     document.title = title;
@@ -16,7 +16,7 @@ const SEO = () => {
 
     const tags: Array<{ selector: string; attrs: Record<string, string> }> = [
       { selector: 'meta[name="description"]', attrs: { name: "description", content: description } },
-      { selector: 'meta[name="author"]', attrs: { name: "author", content: `${site.owner} — ${site.brand}` } },
+      { selector: 'meta[name="author"]', attrs: { name: "author", content: `${site.owner} · ${site.brand}` } },
       { selector: 'meta[name="theme-color"]', attrs: { name: "theme-color", content: "#0A192F" } },
       { selector: 'meta[property="og:title"]', attrs: { property: "og:title", content: title } },
       { selector: 'meta[property="og:description"]', attrs: { property: "og:description", content: description } },

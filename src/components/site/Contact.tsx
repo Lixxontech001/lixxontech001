@@ -33,7 +33,7 @@ const Contact = () => {
       return;
     }
     setSubmitting(true);
-    const subject = encodeURIComponent(`New project inquiry — ${result.data.projectType}`);
+    const subject = encodeURIComponent(`New project inquiry · ${result.data.projectType}`);
     const body = encodeURIComponent(
       `Name: ${result.data.name}\nEmail: ${result.data.email}\nProject Type: ${result.data.projectType}\n\n${result.data.message}`
     );
