@@ -14,14 +14,15 @@ const Services = () => {
       <div className="container">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div className="max-w-2xl">
-            <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">— What I Build</div>
+            <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">// What I Build</div>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight">
-              Production-grade <span className="text-gradient-primary">software</span>.
+              Production grade <span className="text-gradient-primary">software</span>.
             </h2>
           </div>
           <p className="text-muted-foreground max-w-sm">
-            Six service tracks, one engineer, end-to-end ownership. Pick a starting point... I'll scope the rest with you on a free 30-min call.
+            Eight service tracks, one engineer, end to end ownership. Pick a starting point and I'll scope the rest with you on a free 30 min call.
           </p>
+
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

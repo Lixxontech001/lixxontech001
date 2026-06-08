@@ -3,11 +3,12 @@ import { GraduationCap, MapPin, Briefcase, Sparkles } from "lucide-react";
 import portrait from "@/assets/about-portrait.jpg";
 
 const timeline = [
-  { year: "2026", title: "Founding Lixxon_Tech", desc: "Productized engineering for startups: SaaS, marketplaces, and AI-powered tools shipped end-to-end." },
-  { year: "2025", title: "Lead Engineer · Fintech & SaaS", desc: "Led builds for a neobank admin console, an AI legal API, and a multi-vendor marketplace." },
-  { year: "2024", title: "Full-Stack Engineer", desc: "Shipped MediBoard (hospital suite), EstatePro CRM and FleetGo logistics platform across 3 industries." },
-  { year: "2022", title: "BSc Cybersecurity · LAUTECH", desc: "Pursuing a degree in Cybersecurity — sharpening the security mindset I bring to every system." },
+  { year: "2026", title: "Founding Lixxon_Tech", desc: "Productized engineering for startups: SaaS, marketplaces, and AI powered tools shipped end to end." },
+  { year: "2025", title: "Lead Engineer · Fintech & SaaS", desc: "Led builds for a neobank admin console, an AI legal API, and a multi vendor marketplace." },
+  { year: "2024", title: "Full Stack Engineer", desc: "Shipped MediBoard (hospital suite), EstatePro CRM and FleetGo logistics platform across 3 industries." },
+  { year: "2022", title: "BSc Cybersecurity · LAUTECH", desc: "Pursuing a degree in Cybersecurity, sharpening the security mindset I bring to every system." },
 ];
+
 
 const About = () => {
   return (
@@ -62,7 +63,7 @@ const About = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">— About Me</div>
+            <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">// About Me</div>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight">
               Engineering systems that are <span className="text-gradient-primary">secure & scalable</span>.
             </h2>
@@ -70,24 +71,24 @@ const About = () => {
               I'm <span className="text-foreground font-medium">Olatoyosi Ridwan</span>, the engineer
               behind <span className="text-foreground font-medium">Lixxon_Tech</span>. For the past four
               years I've shipped ambitious Django + React systems for founders, hospitals, fintechs,
-              logistics teams and ed-tech startups across three continents.
+              logistics teams and ed tech startups across three continents.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               My background in <span className="text-foreground font-medium">Cybersecurity at LAUTECH</span> shapes
-              how I build: secure-by-default, audit-friendly, and resilient under real-world load.
-              I obsess over clean data models, predictable APIs, and interfaces that just feel right —
+              how I build: secure by default, audit friendly, and resilient under real world load.
+              I obsess over clean data models, predictable APIs, and interfaces that just feel right,
               because the difference between a product clients tolerate and one they love is in the details.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               I work directly with founders, write the code myself, and stay involved long after launch.
-              No agency overhead, no junior bait-and-switch — just senior engineering, weekly demos, and
+              No agency overhead, no junior bait and switch. Just senior engineering, frequent demos, and
               a partner who treats your product like it's their own.
             </p>
 
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
               {[
                 { k: "Years", v: "4+" },
-                { k: "Projects", v: "10+" },
+                { k: "Projects", v: "25+" },
                 { k: "GMV", v: "$2M+" },
                 { k: "Stack", v: "Django" },
               ].map((s) => (
@@ -97,6 +98,7 @@ const About = () => {
                 </div>
               ))}
             </div>
+
 
             {/* Timeline */}
             <div className="mt-14">

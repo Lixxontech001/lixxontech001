@@ -56,13 +56,14 @@ const Contact = () => {
         >
           <div className="relative grid lg:grid-cols-[1fr_1.2fr] gap-10 lg:gap-16 items-start">
             <div>
-              <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">— Contact</div>
+              <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">// Contact</div>
               <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight">
                 Let's build something <span className="text-gradient-primary">great</span>.
               </h2>
               <p className="mt-6 text-muted-foreground leading-relaxed">
                 Tell me about your project and I'll respond within 24 hours with next steps.
               </p>
+
 
               <div className="mt-8 space-y-3">
                 <a

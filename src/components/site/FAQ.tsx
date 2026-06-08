@@ -12,7 +12,7 @@ const FAQ = () => {
     <section id="faq" className="relative py-24 md:py-32">
       <div className="container max-w-4xl">
         <div className="text-center mb-14">
-          <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">— FAQ</div>
+          <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">// FAQ</div>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight">
             Questions, <span className="text-gradient-primary">answered</span>.
           </h2>
