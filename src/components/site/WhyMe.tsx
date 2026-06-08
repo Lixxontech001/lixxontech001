@@ -3,11 +3,11 @@ import { Database, Layers, Zap, ShieldCheck, Code2, MessageSquare } from "lucide
 
 const reasons = [
   { icon: Database, title: "Django Expertise", desc: "Deep mastery of Django ORM, DRF, Channels, and deployment. Production backends that scale to millions of requests." },
-  { icon: Layers, title: "Full-Stack Delivery", desc: "One engineer, entire stack. Backend, frontend, APIs, databases, infra I own the outcome." },
-  { icon: Zap, title: "Rapid Prototyping", desc: "Django's batteries-included philosophy lets me ship validated MVPs in weeks, not months." },
-  { icon: ShieldCheck, title: "Secure & Reliable", desc: "OWASP-aligned auth, audit logs, and data protection — backed by cybersecurity coursework at LAUTECH." },
+  { icon: Layers, title: "Full Stack Delivery", desc: "One engineer, entire stack. Backend, frontend, APIs, databases, infra. I own the outcome." },
+  { icon: Zap, title: "Rapid Prototyping", desc: "Django's batteries included philosophy lets me ship validated MVPs in weeks, not months." },
+  { icon: ShieldCheck, title: "Secure & Reliable", desc: "OWASP aligned auth, audit logs, and data protection, backed by cybersecurity coursework at LAUTECH." },
   { icon: Code2, title: "Clean Maintainable Code", desc: "PEP8 + type hints + pytest + CI. Your future team will thank you for the codebase you inherit." },
-  { icon: MessageSquare, title: "Transparent Communication", desc: "Weekly demos, Loom updates, honest deadlines. You'll always know exactly where the project stands." },
+  { icon: MessageSquare, title: "Transparent Communication", desc: "Frequent demos, Loom updates, honest deadlines. You'll always know exactly where the project stands." },
 ];
 
 const WhyMe = () => {
@@ -15,11 +15,12 @@ const WhyMe = () => {
     <section id="why" className="relative py-24 md:py-32">
       <div className="container">
         <div className="max-w-2xl mb-14">
-          <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">— Why Work With Me</div>
+          <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">// Why Work With Me</div>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight">
             Engineered for trust, <span className="text-gradient-primary">built to last</span>.
           </h2>
         </div>
+
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {reasons.map((r, i) => (

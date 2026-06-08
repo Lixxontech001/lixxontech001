@@ -78,9 +78,9 @@ const Hero = () => {
               variants={item}
               className="mt-8 text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed"
             >
-              I'm <span className="text-foreground font-medium">Olatoyosi Ridwan</span> — I build SaaS,
-              marketplaces, dashboards and APIs end-to-end with Django, React and AI. Honest scopes,
-              weekly demos, code you actually own.
+              I'm <span className="text-foreground font-medium">Olatoyosi Ridwan</span>. I build SaaS,
+              marketplaces, dashboards and APIs end to end with Django, React and modern tooling. Honest scopes,
+              twice weekly demos, code you actually own.
             </motion.p>
 
             <motion.div
@@ -109,7 +109,7 @@ const Hero = () => {
               className="mt-12 grid grid-cols-3 gap-6 max-w-md border-t border-border pt-6"
             >
               {[
-                { k: "Projects", v: "10+" },
+                { k: "Projects", v: "25+" },
                 { k: "Years", v: "4+" },
                 { k: "Uptime", v: "99.9%" },
               ].map((s) => (
@@ -119,6 +119,7 @@ const Hero = () => {
                 </div>
               ))}
             </motion.dl>
+
           </div>
 
           {/* Right: animated code/architecture card */}
@@ -137,7 +138,7 @@ const Hero = () => {
                 <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F56]" />
                 <span className="h-2.5 w-2.5 rounded-full bg-[#FFBD2E]" />
                 <span className="h-2.5 w-2.5 rounded-full bg-[#27C93F]" />
-                <span className="mono text-[11px] text-muted-foreground ml-2">views.py — Lixxon_Tech</span>
+                <span className="mono text-[11px] text-muted-foreground ml-2">views.py · Lixxon_Tech</span>
               </div>
 
               <pre className="mono text-[12.5px] leading-relaxed p-5 text-foreground/85 overflow-hidden">
@@ -200,8 +201,9 @@ class ProjectViewSet(viewsets.ModelViewSet):
               className="absolute -right-4 -top-6 hidden md:block glass rounded-xl px-4 py-3"
             >
               <div className="mono text-[10px] uppercase text-muted-foreground">Apps shipped</div>
-              <div className="font-bold text-lg">10+</div>
+              <div className="font-bold text-lg">25+</div>
             </motion.div>
+
           </motion.div>
         </motion.div>
       </div>

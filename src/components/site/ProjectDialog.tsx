@@ -57,7 +57,7 @@ const ProjectDialog = ({ project, open, onOpenChange }: Props) => {
           </div>
 
           <div className="mt-7">
-            <div className="mono text-[10.5px] uppercase tracking-widest text-primary mb-3">— Highlights</div>
+            <div className="mono text-[10.5px] uppercase tracking-widest text-primary mb-3">// Highlights</div>
             <ul className="grid sm:grid-cols-2 gap-2.5">
               {project.highlights.map((h, i) => (
                 <motion.li
@@ -77,7 +77,7 @@ const ProjectDialog = ({ project, open, onOpenChange }: Props) => {
           </div>
 
           <div className="mt-7">
-            <div className="mono text-[10.5px] uppercase tracking-widest text-primary mb-3">— Tech Stack</div>
+            <div className="mono text-[10.5px] uppercase tracking-widest text-primary mb-3">// Tech Stack</div>
             <div className="flex flex-wrap gap-1.5">
               {project.tech.map((t) => (
                 <span
@@ -94,7 +94,7 @@ const ProjectDialog = ({ project, open, onOpenChange }: Props) => {
             <div className="mt-7 flex items-start gap-2.5 rounded-xl border border-border bg-secondary/60 p-3.5 text-xs text-muted-foreground">
               <Info size={14} className="mt-0.5 text-primary shrink-0" />
               <span>
-                Live demo is a placeholder that looks just like the project. The deployed client build is private .... request a walkthrough via the contact form.
+                Live demo is a placeholder that looks just like the project. The deployed client build is private. Request a walkthrough via the contact form.
               </span>
             </div>
           )}

@@ -15,7 +15,7 @@ const Results = () => {
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <div className="container">
         <div className="max-w-2xl mb-16">
-          <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">— Results</div>
+          <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">// Results</div>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
             What I bring to <span className="text-gradient-primary">your business</span>.
           </h2>

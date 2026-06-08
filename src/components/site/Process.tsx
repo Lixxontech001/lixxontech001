@@ -6,12 +6,13 @@ const Process = () => {
     <section id="process" className="relative py-24 md:py-32 surface-muted">
       <div className="container">
         <div className="max-w-2xl mb-14">
-          <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">— How We'll Work</div>
+          <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">// How We'll Work</div>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight">
             A calm, predictable <span className="text-gradient-primary">delivery process</span>.
           </h2>
           <p className="mt-5 text-muted-foreground text-lg">
-            No surprises, no scope creep. Just clear milestones, weekly demos, and code you own from commit one.
+            No surprises, no scope creep. Just clear milestones, frequent demos, and code you own from commit one.
+
           </p>
         </div>
 

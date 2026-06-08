@@ -14,8 +14,9 @@ const Footer = () => {
             </span>
           </div>
           <p className="text-xs text-muted-foreground mono text-center">
-            Lixxon_Tech © 2026 — Crafted with Django & Precision.
+            Lixxon_Tech © 2026 · Crafted with Django & Precision.
           </p>
+
           <a
             href="#home"
             className="inline-flex items-center gap-2 text-xs mono text-muted-foreground hover:text-primary transition-colors"

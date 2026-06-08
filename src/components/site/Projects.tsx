@@ -29,7 +29,7 @@ const Projects = () => {
               transition={{ duration: reduced ? 0 : 0.5 }}
               className="mono text-xs text-primary mb-4 tracking-widest uppercase"
             >
-              — Selected Work
+              // Selected Work
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -42,7 +42,8 @@ const Projects = () => {
             </motion.h2>
           </div>
           <p className="text-muted-foreground max-w-sm">
-            Real Django-powered applications shipped end-to-end — from data model to deployment. Tap any card for the full case study.
+            Real Django powered applications shipped end to end, from data model to deployment. Tap any card for the full case study.
+
           </p>
         </div>
 
