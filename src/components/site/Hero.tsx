@@ -57,7 +57,7 @@ const Hero = () => {
                 <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-60" />
                 <span className="relative rounded-full bg-primary h-2 w-2" />
               </span>
-              Available for freelance · 2026
+              Available for freelance · 2025
               <span className="opacity-40">·</span>
               <span className="flex items-center gap-0.5">
                 {Array.from({ length: 5 }).map((_, k) => (
