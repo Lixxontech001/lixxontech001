@@ -487,7 +487,7 @@ export const services: Service[] = [
     desc: "Battle tested REST and webhook APIs with full OpenAPI docs and seamless third party integrations.",
     features: ["OpenAPI 3.1 docs", "OAuth2 & JWT", "Webhooks & retries", "Rate limiting"],
     stack: ["DRF", "Celery", "Redis", "Stripe", "OpenAI"],
-    starting: "from $500",
+    starting: "from $600",
   },
   {
     title: "eCommerce Platforms",
@@ -501,7 +501,7 @@ export const services: Service[] = [
     desc: "Real time, role based dashboards with rich visualizations, exports, and audit trails.",
     features: ["WebSockets live data", "Chart.js / Recharts", "CSV / PDF exports", "Audit logging"],
     stack: ["Django Channels", "React", "Recharts", "Postgres"],
-    starting: "from $1,100",
+    starting: "from $1,200",
   },
   {
     title: "AI Powered Features",
@@ -529,7 +529,7 @@ export const services: Service[] = [
     desc: "Containerize, deploy, monitor on AWS, Fly.io, or Railway with zero downtime releases and observability.",
     features: ["Docker + GH Actions", "Zero downtime deploys", "Sentry + logs", "Cost optimization"],
     stack: ["AWS", "Docker", "Terraform", "Sentry"],
-    starting: "from $600",
+    starting: "from $800",
   },
 ];
 
