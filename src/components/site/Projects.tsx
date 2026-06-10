@@ -71,15 +71,22 @@ const Projects = () => {
                   height={800}
                   loading="lazy"
                   className="h-full w-full object-cover"
-                  whileHover={reduced ? undefined : { scale: 1.06 }}
-                  transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                  whileHover={reduced ? undefined : { scale: 1.08 }}
+                  transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/20 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-95 group-hover:opacity-75 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-transparent to-accent/0 group-hover:from-primary/15 group-hover:to-accent/10 transition-all duration-700" />
+
+                {/* Oversized index numeral */}
+                <div className="absolute -bottom-2 -right-1 index-numeral text-[7rem] md:text-[9rem] pointer-events-none select-none opacity-90">
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+
                 <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-background/80 backdrop-blur px-2.5 py-1 mono text-[10px] uppercase tracking-widest border border-border">
                   <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
                   {p.year}
                 </div>
-                <div className="absolute top-3 right-3 inline-flex items-center gap-1 rounded-full bg-primary text-primary-foreground px-2.5 py-1 mono text-[10px] uppercase tracking-widest font-semibold">
+                <div className="absolute top-3 right-3 inline-flex items-center gap-1 rounded-full bg-primary text-primary-foreground px-2.5 py-1 mono text-[10px] uppercase tracking-widest font-semibold opacity-0 group-hover:opacity-100 translate-y-[-4px] group-hover:translate-y-0 transition-all duration-500">
                   Case study <ArrowUpRight size={11} />
                 </div>
                 {p.metrics && (
@@ -87,7 +94,7 @@ const Projects = () => {
                     {p.metrics.map((m) => (
                       <div
                         key={m.label}
-                        className="flex-1 rounded-lg bg-background/70 backdrop-blur px-2.5 py-1.5 border border-border"
+                        className="flex-1 rounded-lg bg-background/75 backdrop-blur px-2.5 py-1.5 border border-border"
                       >
                         <div className="font-display text-sm font-bold text-foreground leading-none">{m.value}</div>
                         <div className="mono text-[9px] uppercase tracking-wider text-muted-foreground mt-0.5">{m.label}</div>
@@ -96,6 +103,7 @@ const Projects = () => {
                   </div>
                 )}
               </button>
+
                
               <div className="p-7 flex-1 flex flex-col">
                 <div className="mono text-[10.5px] uppercase tracking-widest text-muted-foreground mb-2">
