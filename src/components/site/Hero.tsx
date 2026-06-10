@@ -32,21 +32,23 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center pt-28 sm:pt-32 pb-16 sm:pb-20 overflow-x-hidden">
       <div className="aurora" aria-hidden />
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 dot-pattern opacity-50" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
       </div>
 
-      <div className="container">
+      <div className="container px-4 sm:px-6">
+
         <motion.div
           variants={container}
           initial="hidden"
           animate="show"
-          className="grid lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-center"
+          className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-center"
         >
-          <div>
+          <div className="min-w-0">
+
             <motion.div
               variants={item}
               className="inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 text-xs mono text-muted-foreground mb-8"
@@ -127,21 +129,23 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.94, y: 30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="relative"
+            className="relative w-full min-w-0 max-w-full"
+
           >
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="relative glass-strong rounded-2xl overflow-hidden shimmer-border"
+              className="relative glass-strong rounded-2xl overflow-hidden shimmer-border w-full max-w-full"
             >
               <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-secondary/60">
                 <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F56]" />
                 <span className="h-2.5 w-2.5 rounded-full bg-[#FFBD2E]" />
                 <span className="h-2.5 w-2.5 rounded-full bg-[#27C93F]" />
-                <span className="mono text-[11px] text-muted-foreground ml-2">views.py · Lixxon_Tech</span>
+                <span className="mono text-[10px] sm:text-[11px] text-muted-foreground ml-2 truncate">views.py · Lixxon_Tech</span>
               </div>
 
-              <pre className="mono text-[12.5px] leading-relaxed p-5 text-foreground/85 overflow-hidden">
+              <pre className="mono text-[10.5px] sm:text-[12.5px] leading-relaxed p-4 sm:p-5 text-foreground/85 overflow-x-auto whitespace-pre">
+
 {`from rest_framework import viewsets
 from .models import Project
 from .serializers import ProjectSerializer
