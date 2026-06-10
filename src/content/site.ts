@@ -24,7 +24,7 @@ export const site = {
   linkedin: "https://www.linkedin.com/",
   cv: "/Olatoyosi_Ridwan_Django_CV.pdf",
   location: "Nigeria · Remote worldwide",
-  availability: "Available for freelance · 2026",
+  availability: "Available for freelance · 2025",
 } as const;
 
 export type Project = {
