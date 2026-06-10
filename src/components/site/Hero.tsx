@@ -45,9 +45,10 @@ const Hero = () => {
           variants={container}
           initial="hidden"
           animate="show"
-          className="grid lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-center"
+          className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-center"
         >
-          <div>
+          <div className="min-w-0">
+
             <motion.div
               variants={item}
               className="inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 text-xs mono text-muted-foreground mb-8"
