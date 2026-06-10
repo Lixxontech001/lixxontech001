@@ -33,15 +33,18 @@ const WhyMe = () => {
               className="group glass rounded-2xl p-7 card-hover relative overflow-hidden"
             >
               <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-primary/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <span className="absolute top-4 right-5 mono text-[10px] uppercase tracking-widest text-muted-foreground/70">0{i + 1}</span>
               <div className="relative">
-                <div className="h-11 w-11 rounded-xl bg-primary/10 text-primary border border-primary/20 flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300">
+                <div className="h-11 w-11 rounded-xl bg-primary/10 text-primary border border-primary/20 flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300 group-hover:rotate-[-6deg] group-hover:scale-110">
                   <r.icon size={20} strokeWidth={1.6} />
                 </div>
                 <h3 className="font-display text-lg font-semibold tracking-tight">{r.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mt-2">{r.desc}</p>
               </div>
+              <div className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-700" />
             </motion.article>
           ))}
+
         </div>
       </div>
     </section>
