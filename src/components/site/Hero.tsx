@@ -32,14 +32,15 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center pt-28 sm:pt-32 pb-16 sm:pb-20 overflow-x-hidden">
       <div className="aurora" aria-hidden />
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 dot-pattern opacity-50" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
       </div>
 
-      <div className="container">
+      <div className="container px-4 sm:px-6">
+
         <motion.div
           variants={container}
           initial="hidden"
