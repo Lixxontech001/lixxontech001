@@ -129,7 +129,8 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.94, y: 30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="relative"
+            className="relative w-full min-w-0 max-w-full"
+
           >
             <motion.div
               animate={{ y: [0, -10, 0] }}
