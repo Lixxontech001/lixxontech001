@@ -69,12 +69,13 @@ const Hero = () => {
 
             <motion.h1
               variants={item}
-              className="font-display text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.02] tracking-tight"
+              className="font-display text-[2.75rem] sm:text-5xl md:text-6xl lg:text-[5.25rem] font-bold leading-[0.98] tracking-[-0.035em]"
             >
-              <span className="text-gradient">Senior Django Engineer</span><br />
-              shipping <span className="text-gradient-primary animate-gradient">production-grade</span><br />
-              software for ambitious teams.
+              <span className="text-gradient">I design &amp; ship</span><br />
+              <span className="text-gradient-primary animate-gradient">Django products</span><br />
+              <span className="text-gradient">that drive revenue.</span>
             </motion.h1>
+
 
             <motion.p
               variants={item}

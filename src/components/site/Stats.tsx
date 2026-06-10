@@ -21,9 +21,9 @@ const Stats = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="relative text-center md:text-left"
+              className={`relative text-center md:text-left ${i > 0 ? "md:border-l md:border-border/60 md:pl-8" : ""}`}
             >
-              <div className="font-display text-4xl md:text-5xl font-bold text-gradient-primary">
+              <div className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gradient-primary tracking-tight">
                 {s.value}
               </div>
               <div className="mono text-[11px] uppercase tracking-widest text-muted-foreground mt-2">
@@ -31,6 +31,7 @@ const Stats = () => {
               </div>
             </motion.div>
           ))}
+
         </motion.div>
       </div>
     </section>

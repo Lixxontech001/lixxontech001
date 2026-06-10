@@ -65,6 +65,18 @@
     font-feature-settings: 'ss01', 'cv11';
     background-image: var(--gradient-mesh);
     background-attachment: fixed;
+    position: relative;
+  }
+  /* Subtle film grain across the entire app */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
   }
   h1, h2, h3, h4 {
     font-family: 'Sora', 'Space Grotesk', 'Inter', sans-serif;
@@ -75,6 +87,7 @@
     background: hsl(var(--primary));
     color: hsl(var(--primary-foreground));
   }
+
 
   /* Custom scrollbar */
   ::-webkit-scrollbar { width: 10px; height: 10px; }
@@ -133,10 +146,28 @@
     transition: transform 0.5s var(--transition-smooth), border-color 0.4s, box-shadow 0.5s;
   }
   .card-hover:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
     border-color: hsl(var(--primary) / 0.45);
     box-shadow: var(--shadow-elevated), 0 0 50px -12px hsl(var(--primary) / 0.35);
   }
+
+  /* Editorial oversized index numeral */
+  .index-numeral {
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    background: linear-gradient(180deg, hsl(var(--primary) / 0.22), hsl(var(--primary) / 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.05em;
+    line-height: 0.85;
+  }
+
+  .ring-conic {
+    background: conic-gradient(from 180deg at 50% 50%, hsl(var(--primary)), hsl(var(--accent)), hsl(var(--primary-glow)), hsl(var(--primary)));
+  }
+
+
 
   .shimmer-border {
     position: relative;
