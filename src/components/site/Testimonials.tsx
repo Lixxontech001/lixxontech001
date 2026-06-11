@@ -1,48 +1,36 @@
 import { motion } from "framer-motion";
 import { Quote, Star } from "lucide-react";
-import avatarFounder1 from "@/assets/avatars/founder-1.jpg";
-import avatarDoctor1 from "@/assets/avatars/doctor-1.jpg";
-import avatarCeo1 from "@/assets/avatars/ceo-1.jpg";
-import avatarPm1 from "@/assets/avatars/pm-1.jpg";
-import avatarCto1 from "@/assets/avatars/cto-1.jpg";
-import avatarFounder2 from "@/assets/avatars/founder-2.jpg";
 
 const testimonials = [
   {
     quote: "Lixxon_Tech delivered a Django backend that handles 5x our previous load and shipped it ahead of schedule. He's the kind of engineer you build a company around.",
-    name: "Arslan Conlan",
-    role: "Founder, TradeSphere",
-    avatar: avatarFounder1,
+    name: "Anonymous client",
+    role: "TradeSphere",
   },
   {
     quote: "We hired Lixxon_Tech to rebuild our hospital management system. The result is faster, more secure, and our staff actually enjoys using it. Outstanding work.",
-    name: "Dr. Amara Johnson",
-    role: "Operations Director, MediBoard",
-    avatar: avatarDoctor1,
+    name: "Anonymous client",
+    role: "MediBoard",
   },
   {
     quote: "Clear updates, on time delivery, and a polished final product. Easily the smoothest contractor experience we've had in 4 years of building.",
-    name: "Edward Jones",
-    role: "CEO, EstatePro",
-    avatar: avatarCeo1,
+    name: "Anonymous client",
+    role: "EstatePro",
   },
   {
     quote: "Our internal tool used to take 8 seconds per query. After his rewrite it's under 200ms. The team morale lift alone was worth the contract.",
-    name: "Mei Tanaka",
-    role: "Product Lead, LoopDesk",
-    avatar: avatarPm1,
+    name: "Anonymous client",
+    role: "LoopDesk",
   },
   {
     quote: "He thinks like a founder. Pushed back on scope twice and saved us months of wasted work. We extended his contract by another quarter.",
-    name: "Marcus Bello",
-    role: "CTO, Finova",
-    avatar: avatarCto1,
+    name: "Anonymous client",
+    role: "Finova",
   },
   {
     quote: "Senior level engineering at a freelance price point. Code is clean, documented, tested. I'd hire him again tomorrow.",
-    name: "Sofia Marquez",
-    role: "Founder, LearnLoop",
-    avatar: avatarFounder2,
+    name: "Anonymous client",
+    role: "LearnLoop",
   },
 ];
 
