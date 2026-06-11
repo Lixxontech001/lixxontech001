@@ -59,12 +59,12 @@ const Hero = () => {
               </span>
               Available for freelance · 2025
               <span className="opacity-40">·</span>
-              <span className="flex items-center gap-0.5">
+              {/* <span className="flex items-center gap-0.5">
                 {Array.from({ length: 5 }).map((_, k) => (
                   <Star key={k} size={10} className="fill-primary text-primary" />
                 ))}
-              </span>
-              <span>5.0 rating</span>
+              </span> */}
+              <span>100% job success</span>
             </motion.div>
 
             <motion.h1
