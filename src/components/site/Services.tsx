@@ -20,7 +20,8 @@ const Services = () => {
             </h2>
           </div>
           <p className="text-muted-foreground max-w-sm">
-            Eight service tracks, one engineer, end to end ownership. Pick a starting point and I'll scope the rest with you on a free 30 min call.
+            Ten service tracks, one engineer, end to end ownership. Pick a starting point and I'll scope the rest with you on a free 30 min call.
+            Not a good fit if: you need a WordPress site, have a $500 budget for a full SaaS, or expect same-day delivery. I build serious software for serious founders.
           </p>
 
         </div>
