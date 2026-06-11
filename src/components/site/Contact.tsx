@@ -61,7 +61,7 @@ const Contact = () => {
                 Let's build something <span className="text-gradient-primary">great</span>.
               </h2>
               <p className="mt-6 text-muted-foreground leading-relaxed">
-                Tell me about your project and I'll respond within 24 hours with next steps.
+                Response within 24 hours. Timezone: GMT+1 (but I overlap with US mornings & EU afternoons.
               </p>
 
 
