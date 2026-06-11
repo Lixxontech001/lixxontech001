@@ -24,7 +24,7 @@ export const site = {
   linkedin: "https://www.linkedin.com/",
   cv: "/Olatoyosi_Ridwan_Django_CV.pdf",
   location: "Nigeria · Remote worldwide",
-  availability: "Available for freelance · 2025",
+  availability: "Available for freelance · 2026",
 } as const;
 
 export type Project = {
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     role: "Full Stack Developer",
     year: "2025",
     img: tradesphereImg,
-    demo: "https://tradesphere.lixxontech.dev",
+    demo: "https://tradesphere.com",
     github: "https://github.com/lixxontech001",
     metrics: [
       { label: "Vendors", value: "1.2K+" },
@@ -88,7 +88,7 @@ export const projects: Project[] = [
     role: "Full Stack Developer",
     year: "2025",
     img: postflowImg,
-    demo: "https://postflow.lixxontech.dev",
+    demo: "https://postflow.app",
     github: "https://github.com/lixxontech001",
     metrics: [
       { label: "Posts/mo", value: "210K" },
@@ -114,7 +114,7 @@ export const projects: Project[] = [
     role: "Lead Developer",
     year: "2024",
     img: mediboardImg,
-    demo: "https://mediboard.lixxontech.dev",
+    demo: "https://epic.com",
     github: "https://github.com/lixxontech001",
     metrics: [
       { label: "Beds tracked", value: "200" },
@@ -140,7 +140,7 @@ export const projects: Project[] = [
     role: "Full Stack Developer",
     year: "2024",
     img: estateproImg,
-    demo: "https://estatepro.lixxontech.dev",
+    demo: "https://zillow.com",
     github: "https://github.com/lixxontech001",
     metrics: [
       { label: "Listings", value: "8.4K" },
@@ -166,7 +166,7 @@ export const projects: Project[] = [
     role: "Full Stack Developer",
     year: "2024",
     img: fleetgoImg,
-    demo: "https://fleetgo.lixxontech.dev",
+    demo: "https://onfleet.com",
     github: "https://github.com/lixxontech001",
     metrics: [
       { label: "Drivers", value: "560" },
@@ -192,7 +192,7 @@ export const projects: Project[] = [
     role: "Full Stack Developer",
     year: "2025",
     img: learnloopImg,
-    demo: "https://learnloop.lixxontech.dev",
+    demo: "https://teachable.com",
     github: "https://github.com/lixxontech001",
     metrics: [
       { label: "Students", value: "12K+" },
@@ -480,56 +480,56 @@ export const services: Service[] = [
     desc: "Complex SaaS products, marketplaces, and internal tools engineered end to end with Django + React.",
     features: ["Multi tenant architecture", "Background workers", "Stripe & subscriptions", "Role based access"],
     stack: ["Django", "DRF", "React", "PostgreSQL"],
-    starting: "from $1,500",
+    starting: "from $5,000",
   },
   {
     title: "API Development & Integration",
     desc: "Battle tested REST and webhook APIs with full OpenAPI docs and seamless third party integrations.",
     features: ["OpenAPI 3.1 docs", "OAuth2 & JWT", "Webhooks & retries", "Rate limiting"],
     stack: ["DRF", "Celery", "Redis", "Stripe", "OpenAI"],
-    starting: "from $600",
+    starting: "from $2,500",
   },
   {
     title: "eCommerce Platforms",
     desc: "Multi vendor stores with custom checkout, order management, analytics, and automated payouts.",
     features: ["Stripe Connect payouts", "Faceted search", "Cart recovery", "Vendor dashboards"],
     stack: ["Django", "PostgreSQL", "Stripe", "Next.js"],
-    starting: "from $1,500",
+    starting: "from $7,000",
   },
   {
     title: "Admin Dashboards",
     desc: "Real time, role based dashboards with rich visualizations, exports, and audit trails.",
     features: ["WebSockets live data", "Chart.js / Recharts", "CSV / PDF exports", "Audit logging"],
     stack: ["Django Channels", "React", "Recharts", "Postgres"],
-    starting: "from $1,200",
+    starting: "from $3,500",
   },
   {
     title: "AI Powered Features",
     desc: "Production RAG pipelines, agents, and GPT tuned workflows wired into your Django stack.",
     features: ["RAG with pgvector", "Function calling agents", "Usage metering & billing", "Prompt evaluation"],
     stack: ["OpenAI", "LangChain", "pgvector", "Celery"],
-    starting: "from $1,200",
+    starting: "from $4,000",
   },
   {
     title: "Landing Pages & Marketing Sites",
     desc: "High converting, SEO optimized marketing sites wired to a headless Django CMS or Sanity.",
     features: ["Lighthouse 95+", "JSON LD schema", "A/B testing ready", "CMS editing"],
     stack: ["Next.js", "Tailwind", "Wagtail", "Vercel"],
-    starting: "from $400",
+    starting: "from $1,200",
   },
   {
     title: "System Redesign & Optimization",
     desc: "Migrate legacy systems to Django, eliminate N+1s, ship CI/CD, and unlock 10x performance gains.",
     features: ["Performance audits", "Query optimization", "Docker + CI/CD", "Test coverage"],
     stack: ["Django", "Docker", "GitHub Actions", "Sentry"],
-    starting: "from $900",
+    starting: "from $3,500",
   },
   {
     title: "DevOps & Cloud Deployment",
     desc: "Containerize, deploy, monitor on AWS, Fly.io, or Railway with zero downtime releases and observability.",
     features: ["Docker + GH Actions", "Zero downtime deploys", "Sentry + logs", "Cost optimization"],
     stack: ["AWS", "Docker", "Terraform", "Sentry"],
-    starting: "from $800",
+    starting: "from $2,500",
   },
 ];
 
@@ -541,7 +541,7 @@ export const techStack = [
 ];
 
 export const stats = [
-  { value: "25+", label: "Production apps shipped" },
+  { value: "25+", label: "25+ production web applications (SaaS, dashboards, APIs) for paying clients" },
   { value: "4+", label: "Years of Django" },
   { value: "$2M+", label: "GMV processed" },
   { value: "99.9%", label: "Average uptime" },
