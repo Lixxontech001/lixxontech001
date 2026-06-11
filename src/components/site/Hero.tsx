@@ -147,18 +147,21 @@ const Hero = () => {
 
               <pre className="mono text-[10.5px] sm:text-[12.5px] leading-relaxed p-4 sm:p-5 text-foreground/85 overflow-x-auto whitespace-pre">
 
-{`from rest_framework import viewsets
-from .models import Project
-from .serializers import ProjectSerializer
+{`from django.db import transaction
+from rest_framework import viewsets, status
+from rest_framework.decorators import action
+from rest_framework.response import Response
 
-class ProjectViewSet(viewsets.ModelViewSet):
-    """Production-ready Django API."""
-    queryset = Project.objects.all()
-    serializer_class = ProjectSerializer
-    permission_classes = [IsAuthenticated]
-
-    def perform_create(self, serializer):
-        serializer.save(owner=self.request.user)`}
+class OrderViewSet(viewsets.GenericViewSet):
+    queryset = Order.objects.select_related('user', 'coupon').prefetch_related('items__product')
+    
+    @action(detail=False, methods=['post'], permission_classes=[IsAuthenticated])
+    @transaction.atomic
+    def checkout(self, request):
+        """Idempotent checkout with Stripe, inventory lock, and tax calculation."""
+        idempotency_key = request.headers.get('Idempotency-Key')
+        # ... complex logic
+        return Response({'payment_intent': intent.client_secret})`}
               </pre>
 
               <div className="border-t border-border bg-secondary/40 px-5 py-4 flex items-center justify-between">
