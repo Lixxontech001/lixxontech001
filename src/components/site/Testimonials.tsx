@@ -54,7 +54,7 @@ const Testimonials = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {testimonials.map((t, i) => (
             <motion.figure
-              key={t.name}
+              key={`${t.role}-${i}`}
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -70,19 +70,9 @@ const Testimonials = () => {
               <blockquote className="text-foreground/90 leading-relaxed text-[14.5px] mt-4">
                 "{t.quote}"
               </blockquote>
-              <figcaption className="mt-6 pt-5 border-t border-border flex items-center gap-3">
-                <img
-                  src={t.avatar}
-                  alt={`${t.name} avatar`}
-                  width={48}
-                  height={48}
-                  loading="lazy"
-                  className="h-11 w-11 rounded-full object-cover ring-2 ring-primary/30"
-                />
-                <div>
-                  <div className="font-semibold text-sm">{t.name}</div>
-                  <div className="text-xs text-muted-foreground mono mt-0.5">{t.role}</div>
-                </div>
+              <figcaption className="mt-6 pt-5 border-t border-border">
+                <div className="font-semibold text-sm">{t.name}</div>
+                <div className="text-xs text-muted-foreground mono mt-0.5">{t.role}</div>
               </figcaption>
             </motion.figure>
           ))}
