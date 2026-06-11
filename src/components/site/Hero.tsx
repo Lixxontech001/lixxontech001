@@ -57,7 +57,7 @@ const Hero = () => {
                 <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-60" />
                 <span className="relative rounded-full bg-primary h-2 w-2" />
               </span>
-              Available for freelance · 2025
+              Available for freelance · 2026
               <span className="opacity-40">·</span>
               {/* <span className="flex items-center gap-0.5">
                 {Array.from({ length: 5 }).map((_, k) => (
@@ -151,6 +151,7 @@ const Hero = () => {
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
 
 class OrderViewSet(viewsets.GenericViewSet):
     queryset = Order.objects.select_related('user', 'coupon').prefetch_related('items__product')
