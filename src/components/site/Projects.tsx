@@ -176,12 +176,6 @@ const Projects = () => {
             <a href="#contact">Ask Me <ArrowUpRight size={14} /></a>
           </Button>
         </div>
-         <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
-          <p className="text-sm text-muted-foreground">Not a good fit if: you need a WordPress site, have a $500 budget for a full SaaS, or expect same-day delivery. I build serious software for serious founders. Still have something in mind?</p>
-          <Button asChild variant="primary" size="sm">
-            <a href="#contact">Tell Me<ArrowUpRight size={14} /></a>
-          </Button>
-        </div>
       </div>
 
       <ProjectDialog project={active} open={open} onOpenChange={setOpen} />
