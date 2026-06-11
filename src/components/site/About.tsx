@@ -127,7 +127,7 @@ const About = () => {
             <div className="mt-10 glass rounded-2xl p-5 flex items-start gap-3">
               <Sparkles size={18} className="text-primary mt-0.5 shrink-0" />
               <p className="text-sm text-muted-foreground leading-relaxed">
-                <span className="text-foreground font-medium">Currently accepting 2 projects for Q1 2025.</span>{" "}
+                <span className="text-foreground font-medium">Currently accepting 2 projects for Q1 2026.</span>{" "}
                 If you've got a real problem and a real budget, I'd love to hear about it.
               </p>
             </div>
