@@ -43,6 +43,7 @@ const Projects = () => {
           </div>
           <p className="text-muted-foreground max-w-sm">
             Real Django powered applications shipped end to end, from data model to deployment. Tap any card for the full case study.
+            Live demo is a placeholder that looks just like the project. The deployed client build is private. Request a walkthrough via the contact form.
 
           </p>
         </div>
@@ -170,9 +171,15 @@ const Projects = () => {
           ))}
         </div>
         <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
-          <p className="text-sm text-muted-foreground">Wanna see more? I can show you more</p>
+          <p className="text-sm text-muted-foreground">Plus 15 more NDA-protected projects – ask me for an anonymized portfolio PDF.</p>
           <Button asChild variant="primary" size="sm">
             <a href="#contact">Ask Me <ArrowUpRight size={14} /></a>
+          </Button>
+        </div>
+         <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
+          <p className="text-sm text-muted-foreground">Not a good fit if: you need a WordPress site, have a $500 budget for a full SaaS, or expect same-day delivery. I build serious software for serious founders. Still have something in mind?</p>
+          <Button asChild variant="primary" size="sm">
+            <a href="#contact">Tell Me<ArrowUpRight size={14} /></a>
           </Button>
         </div>
       </div>
