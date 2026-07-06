@@ -438,7 +438,7 @@ export const techStack = [
 ];
 
 export const stats = [
-  { value: "25+", label: "25+ production web applications (SaaS, dashboards, APIs) for paying clients" },
+  { value: "10+", label: "10+ production web applications (SaaS, dashboards, APIs) for paying clients" },
   { value: "4+", label: "Years of Django" },
   { value: "99.9%", label: "Average uptime" },
 ];
