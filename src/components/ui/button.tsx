@@ -9,18 +9,18 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 rounded-full",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-full",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-full",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-full",
-        ghost: "hover:bg-secondary hover:text-foreground rounded-full",
-        link: "text-primary underline-offset-4 hover:underline",
+        default: "bg-foreground text-background hover:bg-foreground/90 rounded-sm",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-sm",
+        outline: "border border-border bg-background hover:bg-secondary rounded-sm",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-sm",
+        ghost: "hover:bg-secondary hover:text-foreground rounded-sm",
+        link: "text-foreground underline-offset-4 hover:underline",
         primary:
-          "rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 hover:-translate-y-0.5 transition-all duration-300 shadow-glow",
+          "rounded-sm bg-foreground text-background font-medium hover:bg-foreground/90 hover:-translate-y-0.5 transition-all duration-300",
         glass:
-          "rounded-full bg-white/5 text-foreground border border-white/10 hover:border-primary/40 hover:bg-white/10 backdrop-blur transition-all duration-300",
+          "rounded-sm bg-card text-foreground border border-border hover:border-foreground/40 hover:bg-secondary transition-all duration-300",
         ghostLine:
-          "rounded-full border border-border text-foreground hover:border-primary hover:text-primary transition-all duration-300 bg-transparent",
+          "rounded-sm border border-foreground/20 text-foreground hover:border-foreground hover:bg-foreground hover:text-background transition-all duration-300 bg-transparent",
       },
       size: {
         default: "h-10 px-5 py-2",

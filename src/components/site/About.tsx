@@ -3,8 +3,8 @@ import { GraduationCap, MapPin, Briefcase, Sparkles } from "lucide-react";
 import portrait from "@/assets/about-portrait.jpg";
 
 const timeline = [
-  { year: "2025", title: "Founding Lixxon_Tech", desc: "Productized engineering for startups: SaaS, marketplaces, and AI powered tools shipped end to end." },
-  { year: "2025", title: "Lead Engineer · Fintech & SaaS", desc: "Led builds for a neobank admin console, an AI legal API, and a multi vendor marketplace." },
+  { year: "2025", title: "Founding Lixxon_Tech", desc: "Productized engineering for startups: SaaS, marketplaces, and internal tools shipped end to end." },
+  { year: "2025", title: "Lead Engineer · Fintech & SaaS", desc: "Led builds for a neobank admin console, a legal research platform, and a multi vendor marketplace." },
   { year: "2024", title: "Full Stack Engineer", desc: "Shipped MediBoard (hospital suite), EstatePro CRM and FleetGo logistics platform across 3 industries." },
   { year: "2025", title: "BSc Cybersecurity · LAUTECH", desc: "Pursuing a degree in Cybersecurity, sharpening the security mindset I bring to every system." },
 ];
@@ -127,7 +127,7 @@ const About = () => {
             <div className="mt-10 glass rounded-2xl p-5 flex items-start gap-3">
               <Sparkles size={18} className="text-primary mt-0.5 shrink-0" />
               <p className="text-sm text-muted-foreground leading-relaxed">
-                <span className="text-foreground font-medium">Currently accepting 2 projects for Q1 2026.</span>{" "}
+                <span className="text-foreground font-medium">Currently accepting 2 projects for Q1 2025.</span>{" "}
                 If you've got a real problem and a real budget, I'd love to hear about it.
               </p>
             </div>
