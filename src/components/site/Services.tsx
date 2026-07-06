@@ -20,8 +20,7 @@ const Services = () => {
             </h2>
           </div>
           <p className="text-muted-foreground max-w-sm">
-            Ten service tracks, one engineer, end to end ownership. Pick a starting point and I'll scope the rest with you on a free 30 min call.
-            Not a good fit if: you need a WordPress site, have a $500 budget for a full SaaS, or expect same-day delivery. I build serious software for serious founders.
+            Ten service tracks, one engineer, end to end ownership. Pick a starting point and I'll scope the rest with you on a free 30 min call on in the conversation.
           </p>
 
         </div>
@@ -86,7 +85,7 @@ const Services = () => {
         </div>
 
         <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
-          <p className="text-sm text-muted-foreground">Not sure what you need? Book a free 30-minute scoping call.</p>
+          <p className="text-sm text-muted-foreground">Not sure what you need? Talk to me about what you need.</p>
           <Button asChild variant="primary" size="sm">
             <a href="#contact">Book a Free Call <ArrowUpRight size={14} /></a>
           </Button>
