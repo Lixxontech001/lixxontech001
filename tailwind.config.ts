@@ -12,7 +12,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['"Space Grotesk"', 'sans-serif'],
+        display: ['"Instrument Serif"', 'Georgia', 'serif'],
         sans: ['Inter', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       },
