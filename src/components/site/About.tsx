@@ -69,7 +69,7 @@ const About = () => {
             </h2>
             <p className="mt-8 text-muted-foreground text-lg leading-relaxed">
               I'm <span className="text-foreground font-medium">Olatoyosi Ridwan</span>, the engineer
-              behind <span className="text-foreground font-medium">Lixxon_Tech</span>. For the past four
+              behind <span className="text-foreground font-medium">Lixxon_Tech</span>. For the past
               years I've shipped ambitious Django + React systems for founders, hospitals, fintechs,
               logistics teams and ed tech startups across three continents.
             </p>
@@ -89,7 +89,7 @@ const About = () => {
               {[
                 { k: "Years", v: "4+" },
                 { k: "Projects", v: "25+" },
-                { k: "GMV", v: "$2M+" },
+                // { k: "GMV", v: "$2M+" },
                 { k: "Stack", v: "Django" },
               ].map((s) => (
                 <div key={s.k} className="glass rounded-xl p-4 text-center">
@@ -100,8 +100,8 @@ const About = () => {
             </div>
 
 
-            {/* Timeline */}
-            <div className="mt-14">
+             {/* Timeline */}
+            {/* <div className="mt-14">
               <div className="mono text-xs text-primary mb-6 tracking-widest uppercase flex items-center gap-2">
                 <Briefcase size={12} /> Journey
               </div>
@@ -122,7 +122,7 @@ const About = () => {
                   </motion.li>
                 ))}
               </ol>
-            </div>
+            </div>  */}
 
             <div className="mt-10 glass rounded-2xl p-5 flex items-start gap-3">
               <Sparkles size={18} className="text-primary mt-0.5 shrink-0" />
