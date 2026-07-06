@@ -33,25 +33,25 @@ const Hero = () => {
                 <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-60" />
                 <span className="relative rounded-full bg-primary h-1.5 w-1.5" />
               </span>
-              Available for select projects — 2025
+              Available for select projects — 2026
             </motion.div>
 
             <motion.h1
               variants={item}
               className="font-display text-[3rem] sm:text-6xl md:text-7xl lg:text-[6.5rem] leading-[0.95] tracking-[-0.02em] text-foreground"
             >
-              Software that
+              I build secure, scalable web platforms with 
               <br />
-              <span className="italic text-primary">quietly</span> earns
+              <span className="italic text-primary">quietly</span> Django
               <br />
-              its keep.
+              
             </motion.h1>
 
             <motion.p
               variants={item}
               className="mt-10 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed"
             >
-              I'm <span className="text-foreground font-medium">Olatoyosi Ridwan</span> — a senior
+              I'm <span className="text-foreground font-medium">Olatoyosi Ridwan</span>  a senior
               engineer building Django &amp; React systems for founders who care about revenue,
               reliability, and the finer details.
             </motion.p>
@@ -82,7 +82,7 @@ const Hero = () => {
               className="mt-16 grid grid-cols-3 gap-8 max-w-lg border-t border-border pt-8"
             >
               {[
-                { k: "Shipped", v: "25+" },
+                { k: "Shipped", v: "10+" },
                 { k: "Years", v: "4+" },
                 { k: "Uptime", v: "99.9%" },
               ].map((s) => (
