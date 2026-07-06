@@ -88,7 +88,7 @@ const About = () => {
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
               {[
                 { k: "Years", v: "4+" },
-                { k: "Projects", v: "25+" },
+                { k: "Projects", v: "10+" },
                 // { k: "GMV", v: "$2M+" },
                 { k: "Stack", v: "Django" },
               ].map((s) => (
