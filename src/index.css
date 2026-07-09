@@ -129,9 +129,9 @@
   }
 
   .index-numeral {
-    font-family: 'Instrument Serif', serif;
-    font-weight: 400;
-    font-style: italic;
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "opsz" 144;
+    font-weight: 500;
     color: hsl(var(--foreground) / 0.06);
     letter-spacing: -0.05em;
     line-height: 0.85;
