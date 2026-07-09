@@ -26,8 +26,8 @@ const Hero = () => {
         className="grid grid-cols-1 lg:grid-cols-[7fr_5fr] min-h-screen pt-24"
       >
         {/* LEFT — content */}
-        <div className="flex flex-col justify-between px-6 md:px-12 lg:px-20 py-14 lg:py-20 lg:border-r border-border">
-          <div className="space-y-6">
+        <div className="flex flex-col justify-center gap-12 px-6 md:px-12 lg:px-20 py-14 lg:py-20 lg:border-r border-border">
+          <div className="space-y-8">
             <motion.div variants={item} className="flex items-center gap-3">
               <span className="relative flex h-1.5 w-1.5">
                 <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-60" />
@@ -48,7 +48,8 @@ const Hero = () => {
             </motion.h1>
           </div>
 
-          <div className="mt-14 lg:mt-0 max-w-lg space-y-10">
+          <div className="max-w-lg space-y-10">
+
             <motion.p
               variants={item}
               className="text-base md:text-lg text-muted-foreground leading-relaxed"
