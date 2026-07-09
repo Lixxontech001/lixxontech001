@@ -34,7 +34,7 @@ const Hero = () => {
                 <span className="relative rounded-full bg-primary h-1.5 w-1.5" />
               </span>
               <span className="mono text-[11px] uppercase tracking-[0.28em] text-primary">
-                Senior Software Engineer — Available Q1 2025
+                Django Developer available for - 2026
               </span>
             </motion.div>
 
@@ -44,7 +44,7 @@ const Hero = () => {
             >
               Architecting
               <br />
-              <span className="text-muted-foreground">resilient</span> systems.
+              <span className="text-muted-foreground">resilient</span> Django systems.
             </motion.h1>
           </div>
 
@@ -54,7 +54,7 @@ const Hero = () => {
               variants={item}
               className="text-base md:text-lg text-muted-foreground leading-relaxed"
             >
-              I'm <span className="text-foreground">Olatoyosi Ridwan</span> — a senior engineer
+              I'm <span className="text-foreground">Olatoyosi Ridwan</span> — a Developer
               building Django &amp; React infrastructure for founders and product teams who care
               about revenue, reliability, and the finer details.
             </motion.p>
