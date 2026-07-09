@@ -1,83 +1,90 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Download, ArrowUpRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import portrait from "@/assets/about-portrait.jpg";
+import { ArrowRight, Download } from "lucide-react";
 
 const container = {
   hidden: {},
   show: { transition: { staggerChildren: 0.09, delayChildren: 0.05 } },
 };
 const item = {
-  hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as const } },
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] as const } },
 };
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
-      <div className="absolute inset-0 -z-10 grid-pattern opacity-40" />
+    <section
+      id="home"
+      className="relative min-h-screen w-full border-b border-border overflow-hidden"
+    >
+      <div className="absolute inset-0 -z-10 grid-pattern opacity-60" />
+      <div className="absolute inset-0 -z-10 bg-gradient-radial" />
 
-      <div className="container px-4 sm:px-6">
-        <motion.div
-          variants={container}
-          initial="hidden"
-          animate="show"
-          className="grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] gap-14 lg:gap-20 items-center"
-        >
-          <div className="min-w-0">
-            <motion.div
-              variants={item}
-              className="inline-flex items-center gap-2.5 mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-10"
-            >
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="show"
+        className="grid grid-cols-1 lg:grid-cols-[7fr_5fr] min-h-screen pt-24"
+      >
+        {/* LEFT — content */}
+        <div className="flex flex-col justify-between px-6 md:px-12 lg:px-20 py-14 lg:py-20 lg:border-r border-border">
+          <div className="space-y-6">
+            <motion.div variants={item} className="flex items-center gap-3">
               <span className="relative flex h-1.5 w-1.5">
                 <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-60" />
                 <span className="relative rounded-full bg-primary h-1.5 w-1.5" />
               </span>
-              Available for select projects — 2026
+              <span className="mono text-[11px] uppercase tracking-[0.28em] text-primary">
+                Senior Software Engineer — Available Q1 2025
+              </span>
             </motion.div>
 
             <motion.h1
               variants={item}
-              className="font-display text-[2.75rem] sm:text-6xl md:text-7xl lg:text-[6.25rem] leading-[0.95] tracking-[-0.03em] text-foreground font-medium"
+              className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] font-medium leading-[0.92] tracking-[-0.035em] text-foreground"
             >
-              Engineered software.
+              Architecting
               <br />
-              Built to <span className="text-primary">endure</span>.
+              <span className="text-muted-foreground">resilient</span> systems.
             </motion.h1>
+          </div>
 
+          <div className="mt-14 lg:mt-0 max-w-lg space-y-10">
             <motion.p
               variants={item}
-              className="mt-10 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed"
+              className="text-base md:text-lg text-muted-foreground leading-relaxed"
             >
-              I'm <span className="text-foreground font-medium">Olatoyosi Ridwan</span>  a senior
-              engineer building Django &amp; React systems for founders who care about revenue,
-              reliability, and the finer details.
+              I'm <span className="text-foreground">Olatoyosi Ridwan</span> — a senior engineer
+              building Django &amp; React infrastructure for founders and product teams who care
+              about revenue, reliability, and the finer details.
             </motion.p>
 
-            <motion.div
-              variants={item}
-              className="mt-12 flex flex-wrap items-center gap-3"
-            >
-              <Button asChild variant="primary" size="lg">
-                <a href="#contact">
-                  Start a project <ArrowRight size={18} />
-                </a>
-              </Button>
-              <Button asChild variant="ghostLine" size="lg">
-                <a href="#projects">
-                  See the work <ArrowUpRight size={18} />
-                </a>
-              </Button>
-              <Button asChild variant="glass" size="lg">
-                <a href="/Olatoyosi_Ridwan_Django_CV.pdf" download>
-                  <Download size={16} /> CV
-                </a>
-              </Button>
+            <motion.div variants={item} className="flex flex-wrap items-center gap-8">
+              <a
+                href="#projects"
+                className="group inline-flex items-center gap-3 font-display font-medium text-[15px] text-foreground"
+              >
+                View the work
+                <span className="relative block h-px w-10 bg-primary transition-all duration-500 group-hover:w-16" />
+                <ArrowRight size={16} className="text-primary opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all duration-500" />
+              </a>
+              <a
+                href="#contact"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Start a project →
+              </a>
+              <a
+                href="/Olatoyosi_Ridwan_Django_CV.pdf"
+                download
+                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Download size={14} /> CV
+              </a>
             </motion.div>
 
             <motion.dl
               variants={item}
-              className="mt-16 grid grid-cols-3 gap-8 max-w-lg border-t border-border pt-8"
+              className="grid grid-cols-3 gap-6 pt-8 border-t border-border"
             >
               {[
                 { k: "Shipped", v: "10+" },
@@ -85,46 +92,71 @@ const Hero = () => {
                 { k: "Uptime", v: "99.9%" },
               ].map((s) => (
                 <div key={s.k}>
-                  <dt className="mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">{s.k}</dt>
+                  <dt className="mono text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
+                    {s.k}
+                  </dt>
                   <dd className="font-display text-3xl md:text-4xl mt-2 text-foreground">{s.v}</dd>
                 </div>
               ))}
             </motion.dl>
           </div>
+        </div>
 
-          {/* Right: editorial portrait card */}
+        {/* RIGHT — structural visual */}
+        <div className="relative bg-card border-t lg:border-t-0 border-border overflow-hidden flex items-center justify-center p-8 md:p-12">
+          <div
+            className="absolute inset-0 opacity-40"
+            style={{
+              backgroundImage:
+                "radial-gradient(hsl(199 89% 60% / 0.12) 0.6px, transparent 0.6px)",
+              backgroundSize: "24px 24px",
+            }}
+          />
+
           <motion.div
-            initial={{ opacity: 0, scale: 0.97, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 1.1, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="relative w-full max-w-md mx-auto lg:max-w-none"
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            className="relative z-10 w-full max-w-md aspect-square"
           >
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-border shadow-elevated bg-secondary">
-              <img
-                src={portrait}
-                alt="Olatoyosi Ridwan — engineer at Lixxon Tech"
-                className="h-full w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/25 via-transparent to-transparent" />
-
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-background">
-                <div className="mono text-[10px] uppercase tracking-[0.25em] opacity-70">01 — Studio</div>
-                <div className="font-display text-2xl mt-1">Lixxon Tech</div>
-              </div>
+            <div className="absolute inset-0 border border-primary/20 rotate-45 scale-[0.78]" />
+            <div className="absolute inset-0 border border-primary/10 rotate-12 scale-90" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-40 h-40 bg-primary/20 blur-[100px] rounded-full" />
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1 }}
-              className="absolute -left-4 -bottom-8 hidden md:block bg-card border border-border rounded-sm px-5 py-4 shadow-card"
-            >
-              <div className="mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Now</div>
-              <div className="font-display text-lg text-foreground mt-0.5">Q1 · 2 slots open</div>
-            </motion.div>
+            <div className="absolute inset-0 flex flex-col justify-between p-6">
+              <div className="flex justify-between items-start">
+                <div className="mono text-[10px] uppercase tracking-[0.28em] text-primary/70">
+                  01 / System
+                </div>
+                <div className="mono text-[10px] text-muted-foreground">v4.2</div>
+              </div>
+
+              <div className="text-center space-y-2">
+                <div className="font-display text-5xl md:text-6xl font-medium text-foreground tracking-tight">
+                  Lixxon
+                </div>
+                <div className="mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+                  Engineering Studio
+                </div>
+              </div>
+
+              <div className="mono text-[10px] text-primary/50 space-y-1">
+                <p>LAT: 6.5244° N</p>
+                <p>LNG: 3.3792° E</p>
+                <p className="text-primary/80">SYS_STATUS: OPERATIONAL</p>
+              </div>
+            </div>
           </motion.div>
-        </motion.div>
-      </div>
+
+          {/* corner ticks */}
+          <div className="absolute top-6 left-6 w-4 h-4 border-l border-t border-primary/40" />
+          <div className="absolute top-6 right-6 w-4 h-4 border-r border-t border-primary/40" />
+          <div className="absolute bottom-6 left-6 w-4 h-4 border-l border-b border-primary/40" />
+          <div className="absolute bottom-6 right-6 w-4 h-4 border-r border-b border-primary/40" />
+        </div>
+      </motion.div>
     </section>
   );
 };
