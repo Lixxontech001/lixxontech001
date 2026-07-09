@@ -99,8 +99,9 @@
     color: hsl(var(--foreground));
   }
   .text-gradient-primary {
-    font-style: italic;
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "opsz" 144, "SOFT" 20;
+    font-weight: 500;
     color: hsl(var(--primary));
   }
   .grid-pattern {
