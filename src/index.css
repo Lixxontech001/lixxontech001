@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..50&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -55,13 +55,15 @@
   html { scroll-behavior: smooth; }
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
-    font-feature-settings: 'ss01', 'cv11';
+    font-family: 'Geist', 'Inter', system-ui, sans-serif;
+    font-feature-settings: 'ss01', 'ss02', 'cv11';
+    font-optical-sizing: auto;
   }
   h1, h2, h3, h4 {
-    font-family: 'Instrument Serif', 'Times New Roman', serif;
-    letter-spacing: -0.015em;
-    font-weight: 400;
+    font-family: 'Fraunces', 'Times New Roman', serif;
+    font-variation-settings: "opsz" 144, "SOFT" 0;
+    letter-spacing: -0.028em;
+    font-weight: 500;
   }
   ::selection {
     background: hsl(var(--foreground));
@@ -97,8 +99,9 @@
     color: hsl(var(--foreground));
   }
   .text-gradient-primary {
-    font-style: italic;
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "opsz" 144, "SOFT" 20;
+    font-weight: 500;
     color: hsl(var(--primary));
   }
   .grid-pattern {
@@ -126,9 +129,9 @@
   }
 
   .index-numeral {
-    font-family: 'Instrument Serif', serif;
-    font-weight: 400;
-    font-style: italic;
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "opsz" 144;
+    font-weight: 500;
     color: hsl(var(--foreground) / 0.06);
     letter-spacing: -0.05em;
     line-height: 0.85;

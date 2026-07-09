@@ -38,13 +38,11 @@ const Hero = () => {
 
             <motion.h1
               variants={item}
-              className="font-display text-[3rem] sm:text-6xl md:text-7xl lg:text-[6.5rem] leading-[0.95] tracking-[-0.02em] text-foreground"
+              className="font-display text-[2.75rem] sm:text-6xl md:text-7xl lg:text-[6.25rem] leading-[0.95] tracking-[-0.03em] text-foreground font-medium"
             >
-              I build secure, scalable web platforms with 
+              Engineered software.
               <br />
-              <span className="italic text-primary">quietly</span> Django
-              <br />
-              
+              Built to <span className="text-primary">endure</span>.
             </motion.h1>
 
             <motion.p
