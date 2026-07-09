@@ -14,13 +14,13 @@ const buttonVariants = cva(
         outline: "border border-border bg-background hover:bg-secondary rounded-sm",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-sm",
         ghost: "hover:bg-secondary hover:text-foreground rounded-sm",
-        link: "text-foreground underline-offset-4 hover:underline",
+        link: "text-primary underline-offset-4 hover:underline",
         primary:
-          "rounded-sm bg-foreground text-background font-medium hover:bg-foreground/90 hover:-translate-y-0.5 transition-all duration-300",
+          "rounded-sm bg-primary text-primary-foreground font-medium hover:bg-primary/90 hover:-translate-y-0.5 transition-all duration-300 shadow-glow",
         glass:
-          "rounded-sm bg-card text-foreground border border-border hover:border-foreground/40 hover:bg-secondary transition-all duration-300",
+          "rounded-sm bg-card text-foreground border border-border hover:border-primary/40 hover:bg-secondary transition-all duration-300",
         ghostLine:
-          "rounded-sm border border-foreground/20 text-foreground hover:border-foreground hover:bg-foreground hover:text-background transition-all duration-300 bg-transparent",
+          "rounded-sm border border-foreground/25 text-foreground hover:border-primary hover:text-primary transition-all duration-300 bg-transparent",
       },
       size: {
         default: "h-10 px-5 py-2",
