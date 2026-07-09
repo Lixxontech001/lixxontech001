@@ -55,13 +55,15 @@
   html { scroll-behavior: smooth; }
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
-    font-feature-settings: 'ss01', 'cv11';
+    font-family: 'Geist', 'Inter', system-ui, sans-serif;
+    font-feature-settings: 'ss01', 'ss02', 'cv11';
+    font-optical-sizing: auto;
   }
   h1, h2, h3, h4 {
-    font-family: 'Instrument Serif', 'Times New Roman', serif;
-    letter-spacing: -0.015em;
-    font-weight: 400;
+    font-family: 'Fraunces', 'Times New Roman', serif;
+    font-variation-settings: "opsz" 144, "SOFT" 0;
+    letter-spacing: -0.028em;
+    font-weight: 500;
   }
   ::selection {
     background: hsl(var(--foreground));
