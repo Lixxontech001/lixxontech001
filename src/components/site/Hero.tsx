@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Download, Mail } from "lucide-react";
 
 const container = {
   hidden: {},
@@ -48,8 +48,7 @@ const Hero = () => {
             </motion.h1>
           </div>
 
-          <div className="max-w-lg space-y-10">
-
+          <div className="max-w-xl space-y-10">
             <motion.p
               variants={item}
               className="text-base md:text-lg text-muted-foreground leading-relaxed"
@@ -59,27 +58,29 @@ const Hero = () => {
               about revenue, reliability, and the finer details.
             </motion.p>
 
-            <motion.div variants={item} className="flex flex-wrap items-center gap-8">
+            {/* CTAs — actual buttons */}
+            <motion.div variants={item} className="flex flex-wrap items-center gap-3">
               <a
                 href="#projects"
-                className="group inline-flex items-center gap-3 font-display font-medium text-[15px] text-foreground"
+                className="group inline-flex items-center gap-2.5 rounded-md bg-primary px-5 py-3 font-display text-sm font-medium text-primary-foreground shadow-glow transition-all duration-300 hover:bg-primary-glow hover:-translate-y-0.5 hover:shadow-elevated"
               >
                 View the work
-                <span className="relative block h-px w-10 bg-primary transition-all duration-500 group-hover:w-16" />
-                <ArrowRight size={16} className="text-primary opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all duration-500" />
+                <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
               </a>
               <a
                 href="#contact"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="group inline-flex items-center gap-2.5 rounded-md border border-border bg-card px-5 py-3 font-display text-sm font-medium text-foreground transition-all duration-300 hover:border-primary/60 hover:bg-secondary hover:-translate-y-0.5"
               >
-                Start a project →
+                <Mail size={15} className="text-primary" />
+                Start a project
               </a>
               <a
                 href="/Olatoyosi_Ridwan_Django_CV.pdf"
                 download
-                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="group inline-flex items-center gap-2.5 rounded-md border border-border/70 px-5 py-3 font-display text-sm font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:border-primary/40 hover:-translate-y-0.5"
               >
-                <Download size={14} /> CV
+                <Download size={15} className="transition-transform duration-300 group-hover:translate-y-0.5" />
+                Download CV
               </a>
             </motion.div>
 
@@ -114,39 +115,109 @@ const Hero = () => {
             }}
           />
 
+          {/* animated scan line */}
+          <motion.div
+            aria-hidden
+            initial={{ y: "-100%" }}
+            animate={{ y: "100%" }}
+            transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+            className="absolute inset-x-0 h-24 bg-gradient-to-b from-transparent via-primary/10 to-transparent pointer-events-none"
+          />
+
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="relative z-10 w-full max-w-md aspect-square"
           >
-            <div className="absolute inset-0 border border-primary/20 rotate-45 scale-[0.78]" />
-            <div className="absolute inset-0 border border-primary/10 rotate-12 scale-90" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-40 h-40 bg-primary/20 blur-[100px] rounded-full" />
-            </div>
+            {/* rotating rings */}
+            <motion.div
+              aria-hidden
+              animate={{ rotate: 360 }}
+              transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-0 border border-primary/20 rotate-45 scale-[0.78]"
+            />
+            <motion.div
+              aria-hidden
+              animate={{ rotate: -360 }}
+              transition={{ duration: 55, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-0 border border-primary/10 rotate-12 scale-90"
+            />
+            <motion.div
+              aria-hidden
+              animate={{ rotate: 360 }}
+              transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-0 border border-dashed border-primary/15 rounded-full"
+            />
+
+            {/* pulsing glow */}
+            <motion.div
+              aria-hidden
+              animate={{ opacity: [0.4, 0.9, 0.4], scale: [0.9, 1.05, 0.9] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute inset-0 flex items-center justify-center"
+            >
+              <div className="w-40 h-40 bg-primary/25 blur-[100px] rounded-full" />
+            </motion.div>
+
+            {/* orbiting dots */}
+            <motion.div
+              aria-hidden
+              animate={{ rotate: 360 }}
+              transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-0"
+            >
+              <span className="absolute top-1/2 left-0 -translate-y-1/2 h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_12px_hsl(var(--primary))]" />
+              <span className="absolute top-0 left-1/2 -translate-x-1/2 h-1 w-1 rounded-full bg-primary/60" />
+            </motion.div>
+            <motion.div
+              aria-hidden
+              animate={{ rotate: -360 }}
+              transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-4"
+            >
+              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1 w-1 rounded-full bg-primary/70" />
+            </motion.div>
 
             <div className="absolute inset-0 flex flex-col justify-between p-6">
               <div className="flex justify-between items-start">
                 <div className="mono text-[10px] uppercase tracking-[0.28em] text-primary/70">
                   01 / System
                 </div>
-                <div className="mono text-[10px] text-muted-foreground">v4.2</div>
+                <motion.div
+                  className="mono text-[10px] text-muted-foreground"
+                  animate={{ opacity: [0.5, 1, 0.5] }}
+                  transition={{ duration: 2.4, repeat: Infinity }}
+                >
+                  v4.2
+                </motion.div>
               </div>
 
-              <div className="text-center space-y-2">
+              <motion.div
+                className="text-center space-y-2"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 1 }}
+              >
                 <div className="font-display text-5xl md:text-6xl font-medium text-foreground tracking-tight">
                   Lixxon
                 </div>
                 <div className="mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
                   Engineering Studio
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="mono text-[10px] text-primary/50 space-y-1">
+              <div className="mono text-[10px] text-primary/60 space-y-1">
                 <p>LAT: 6.5244° N</p>
                 <p>LNG: 3.3792° E</p>
-                <p className="text-primary/80">SYS_STATUS: OPERATIONAL</p>
+                <p className="flex items-center gap-1.5 text-primary/90">
+                  <motion.span
+                    className="inline-block h-1.5 w-1.5 rounded-full bg-primary"
+                    animate={{ opacity: [1, 0.25, 1] }}
+                    transition={{ duration: 1.4, repeat: Infinity }}
+                  />
+                  SYS_STATUS: OPERATIONAL
+                </p>
               </div>
             </div>
           </motion.div>

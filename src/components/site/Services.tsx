@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import {
-  LayoutGrid, Code2, ShoppingBag, BarChart3, Globe2, Wrench, Check, ArrowUpRight,
+  LayoutGrid, Code2, ShoppingBag, BarChart3, Globe2, Wrench, Bug, Cloud, Sparkles, Check, ArrowUpRight,
 } from "lucide-react";
 import { services } from "@/content/site";
 import { Button } from "@/components/ui/button";
 
-const icons = [LayoutGrid, Code2, ShoppingBag, BarChart3, Globe2, Wrench];
+const icons = [LayoutGrid, Code2, ShoppingBag, BarChart3, Sparkles, Globe2, Wrench, Cloud, Bug];
 
 const Services = () => {
   return (
