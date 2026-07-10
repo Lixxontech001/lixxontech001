@@ -428,6 +428,13 @@ export const services: Service[] = [
     stack: ["AWS", "Docker", "Terraform", "Sentry"],
     starting: "from $1,500",
   },
+  {
+    title: "Bug Fixing & Maintenance",
+    desc: "Rapid triage for broken builds, silent 500s, and legacy Django apps nobody wants to touch. I ship fixes, not excuses.",
+    features: ["Same day triage", "Root cause write ups", "Regression test coverage", "Monthly retainers"],
+    stack: ["Django", "Sentry", "Pytest", "GitHub"],
+    starting: "from $500",
+  },
 ];
 
 export const techStack = [
