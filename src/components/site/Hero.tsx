@@ -233,7 +233,7 @@ const Hero = () => {
         animate="show"
         className="grid grid-cols-1 lg:grid-cols-[7fr_5fr] min-h-screen pt-24"
       >
-        {/* LEFT — content */}
+        {/* LEFT: content */}
         <div className="flex flex-col justify-center gap-12 px-6 md:px-12 lg:px-20 py-14 lg:py-20 lg:border-r border-border">
           <div className="space-y-8">
             <motion.div variants={item} className="inline-flex items-center gap-3 self-start rounded-full border border-border bg-card/60 backdrop-blur px-3 py-1.5">
@@ -242,7 +242,7 @@ const Hero = () => {
                 <span className="relative rounded-full bg-primary h-1.5 w-1.5" />
               </span>
               <span className="mono text-[10px] uppercase tracking-[0.28em] text-primary">
-                Senior Django Engineer · Booking Q1 2026
+                Django + React Developer · Open for projects
               </span>
               <span className="h-3 w-px bg-border" />
               <span className="mono text-[10px] text-muted-foreground">Lagos → Remote</span>
@@ -265,12 +265,12 @@ const Hero = () => {
               variants={item}
               className="text-base md:text-lg text-muted-foreground leading-relaxed"
             >
-              I'm <span className="text-foreground">Olatoyosi Ridwan</span> — a Senior Django + React
-              engineer building revenue-critical backends, payment rails, and async infrastructure for
-              founders and product teams who ship for a living.
+              I'm <span className="text-foreground">Olatoyosi Ridwan</span>, a Django + React developer
+              and B.Tech Cybersecurity student at LAUTECH. I build full stack web applications end to end:
+              data models, APIs, background workers, and the interface on top of them.
             </motion.p>
 
-            {/* CTAs — actual buttons */}
+            {/* CTAs */}
             <motion.div variants={item} className="flex flex-wrap items-center gap-3">
               <a
                 href="#projects"
@@ -302,16 +302,16 @@ const Hero = () => {
               className="grid grid-cols-3 gap-6 pt-8 border-t border-border"
             >
               {[
-                { k: "Shipped", n: 10, s: "+" },
-                { k: "Years", n: 4, s: "+" },
-                { k: "Uptime", n: 99.9, s: "%" },
+                { k: "Case studies", v: "6" },
+                { k: "Core stack", v: "Django" },
+                { k: "Studying", v: "Cybersecurity" },
               ].map((s) => (
                 <div key={s.k}>
                   <dt className="mono text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
                     {s.k}
                   </dt>
-                  <dd className="font-display text-3xl md:text-4xl mt-2 text-foreground tabular-nums">
-                    <CountUp to={s.n} suffix={s.s} />
+                  <dd className="font-display text-xl sm:text-2xl md:text-3xl mt-2 text-foreground">
+                    {s.v}
                   </dd>
                 </div>
               ))}
@@ -319,7 +319,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* RIGHT — Django command console */}
+        {/* RIGHT: Django command console */}
         <div className="relative bg-card border-t lg:border-t-0 border-border overflow-hidden flex items-center justify-center p-6 md:p-10">
           <div
             className="absolute inset-0 opacity-40"
@@ -354,14 +354,14 @@ const Hero = () => {
                 <span className="h-2.5 w-2.5 rounded-full bg-primary/80" />
               </div>
               <span className="mono text-[10px] text-muted-foreground truncate">
-                lixxon@production ~ system
+                lixxon@local ~ dev server
               </span>
               <motion.span
                 className="mono text-[10px] text-primary"
                 animate={{ opacity: [0.4, 1, 0.4] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
-                ● LIVE
+                ● DEMO
               </motion.span>
             </div>
 
@@ -432,10 +432,10 @@ const Hero = () => {
                   animate={{ opacity: [1, 0.3, 1] }}
                   transition={{ duration: 1.2, repeat: Infinity }}
                 />
-                OPERATIONAL
+                RUNNING
               </span>
               <span className="text-muted-foreground">main@a7f2d1c</span>
-              <span className="text-muted-foreground">99.98% · 90d</span>
+              <span className="text-muted-foreground">sample output</span>
             </div>
           </motion.div>
 
