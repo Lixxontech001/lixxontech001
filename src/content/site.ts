@@ -452,10 +452,11 @@ export const techStack = [
 ];
 
 export const stats = [
-  { value: "10+", label: "10+ production web applications (SaaS, dashboards, APIs) for paying clients" },
-  { value: "4+", label: "Years of Django" },
-  { value: "99.9%", label: "Average uptime" },
+  { value: "6", label: "Full stack Django builds documented as case studies" },
+  { value: "2025", label: "B.Tech Cybersecurity, LAUTECH (in progress)" },
+  { value: "Django + React", label: "Primary stack, end to end" },
 ];
+
 
 export const process = [
   {
