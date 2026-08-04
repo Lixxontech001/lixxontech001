@@ -488,26 +488,35 @@ export const process = [
 export const faqs = [
   {
     q: "How long does a typical project take?",
-    a: "A focused MVP ships in 2 to 3 weeks. Mid size SaaS platforms run 4 to 6 weeks. I lock the scope upfront so the timeline is honest, not optimistic.",
+    a: "A focused MVP usually takes 2 to 3 weeks. A larger multi module platform runs 4 to 8 weeks. I scope in writing first so the timeline is realistic rather than optimistic.",
   },
   {
-    q: "Do you work solo or with a team?",
-    a: "I deliver most engagements solo end to end. For larger builds I bring in 1 or 2 trusted engineers I've shipped with before and stay as lead.",
+    q: "Are the projects on this site client work?",
+    a: "Most of them are self directed builds and freelance work rather than enterprise deployments. They exist so you can inspect real architecture decisions, data models, and code instead of taking claims on trust.",
+  },
+  {
+    q: "Do you use AI coding tools?",
+    a: "Yes, deliberately and openly. AI assistants speed up boilerplate, tests, and refactors. I still design the data model, choose the architecture, review every line, and own the result. You get the speed without handing your codebase to autocomplete.",
   },
   {
     q: "What does pricing look like?",
-    a: "Fixed price by milestone for scoped projects, or weekly retainer for ongoing work. You'll always know the cost before I start, and I never bill for revisions inside the spec.",
+    a: "Fixed price by milestone for scoped projects, or a weekly rate for ongoing work. You know the cost before I start, and revisions inside the agreed spec are not billed extra.",
   },
   {
     q: "Will I own the code?",
-    a: "Yes. Every commit is yours from day one, pushed to your GitHub. No vendor lock in, no hidden licensing, no recurring fees to me.",
+    a: "Yes. Every commit is yours from day one, pushed to your repository. No vendor lock in and no recurring licence fees to me.",
+  },
+  {
+    q: "You are still a student. Why hire you?",
+    a: "Because you get senior level care at an honest rate. I am studying Cybersecurity at LAUTECH, which shapes how I handle auth, permissions, and audit trails. What I have not done before, I say so upfront rather than learning on your budget quietly.",
   },
   {
     q: "What if I need changes after launch?",
-    a: "Every project includes 30 days of free post launch support. After that, I offer simple monthly retainers or fixed price change orders.",
+    a: "Every project includes 30 days of post launch support. After that I offer a simple monthly retainer or fixed price change orders.",
   },
   {
     q: "Do you sign NDAs?",
-    a: "Always. I'll sign your NDA before our first call if you'd like, or I can send a mutual one.",
+    a: "Always. I will sign your NDA before the first call, or send you a mutual one.",
   },
 ];
+
