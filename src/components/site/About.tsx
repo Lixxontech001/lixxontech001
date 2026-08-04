@@ -3,10 +3,8 @@ import { GraduationCap, MapPin, Briefcase, Sparkles } from "lucide-react";
 import portrait from "@/assets/about-portrait.jpg";
 
 const timeline = [
-  { year: "2025", title: "Founding Lixxon_Tech", desc: "Productized engineering for startups: SaaS, marketplaces, and internal tools shipped end to end." },
-  { year: "2025", title: "Lead Engineer · Fintech & SaaS", desc: "Led builds for a neobank admin console, a legal research platform, and a multi vendor marketplace." },
-  { year: "2024", title: "Full Stack Engineer", desc: "Shipped MediBoard (hospital suite), EstatePro CRM and FleetGo logistics platform across 3 industries." },
-  { year: "2025", title: "BSc Cybersecurity · LAUTECH", desc: "Pursuing a degree in Cybersecurity, sharpening the security mindset I bring to every system." },
+  { year: "2025", title: "Lixxon_Tech", desc: "Freelance Django and React development for founders and small teams." },
+  { year: "2025", title: "B.Tech Cybersecurity · LAUTECH", desc: "Studying Cybersecurity, which shapes how I handle auth, permissions and audit trails." },
 ];
 
 
@@ -52,7 +50,7 @@ const About = () => {
               </div>
               <div className="glass rounded-xl p-3 flex items-center gap-2.5">
                 <GraduationCap size={16} className="text-primary" />
-                <span className="text-xs">LAUTECH · Cybersecurity</span>
+                <span className="text-xs">LAUTECH · Cybersecurity student</span>
               </div>
             </div>
           </motion.div>
@@ -65,39 +63,44 @@ const About = () => {
           >
             <div className="mono text-xs text-primary mb-4 tracking-widest uppercase">// About Me</div>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight">
-              Engineering systems that are <span className="text-gradient-primary">secure & scalable</span>.
+              A developer who tells you <span className="text-gradient-primary">how it actually works</span>.
             </h2>
             <p className="mt-8 text-muted-foreground text-lg leading-relaxed">
-              I'm <span className="text-foreground font-medium">Olatoyosi Ridwan</span>, the engineer
-              behind <span className="text-foreground font-medium">Lixxon_Tech</span>. For the past
-              years I've shipped ambitious Django + React systems for founders, hospitals, fintechs,
-              logistics teams and ed tech startups across three continents.
+              I'm <span className="text-foreground font-medium">Olatoyosi Ridwan</span>, a Django and React
+              developer working under the name <span className="text-foreground font-medium">Lixxon_Tech</span>,
+              and a B.Tech Cybersecurity student at LAUTECH. I build full stack web applications: the data model,
+              the API, the background jobs, the interface, and the deploy.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              My background in <span className="text-foreground font-medium">Cybersecurity at LAUTECH</span> shapes
-              how I build: secure by default, audit friendly, and resilient under real world load.
-              I obsess over clean data models, predictable APIs, and interfaces that just feel right,
-              because the difference between a product clients tolerate and one they love is in the details.
+              The work in my portfolio is self directed and freelance. These are real, working systems I designed
+              and wrote, not enterprise products with millions of users, and I would rather say that plainly than
+              inflate it. What they do show is how I think: clean schemas, predictable APIs, permissions modelled
+              properly, and interfaces that are pleasant to actually use.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              I work directly with founders, write the code myself, and stay involved long after launch.
-              No agency overhead, no junior bait and switch. Just senior engineering, frequent demos, and
-              a partner who treats your product like it's their own.
+              I use AI coding tools heavily and I am open about it. They accelerate boilerplate, tests and refactors.
+              Every architectural decision, data model and security boundary is still mine, and I review every line
+              that ships. That combination is why I can move quickly without leaving you a codebase nobody understands.
+            </p>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              My Cybersecurity coursework shows up in how I handle authentication, role based access, secrets and
+              audit logging. If you want to see the reasoning behind any of it, ask and I will walk you through the code.
             </p>
 
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
               {[
-                { k: "Years", v: "4+" },
-                { k: "Projects", v: "10+" },
-                // { k: "GMV", v: "$2M+" },
-                { k: "Stack", v: "Django" },
+                { k: "Focus", v: "Django" },
+                { k: "Frontend", v: "React" },
+                { k: "Studying", v: "LAUTECH" },
+                { k: "Based", v: "Nigeria" },
               ].map((s) => (
                 <div key={s.k} className="glass rounded-xl p-4 text-center">
                   <div className="mono text-[10px] uppercase tracking-widest text-muted-foreground">{s.k}</div>
-                  <div className="font-display text-2xl md:text-3xl font-bold mt-1 text-gradient-primary">{s.v}</div>
+                  <div className="font-display text-xl md:text-2xl font-bold mt-1 text-gradient-primary">{s.v}</div>
                 </div>
               ))}
             </div>
+
 
 
              {/* Timeline */}
@@ -127,8 +130,8 @@ const About = () => {
             <div className="mt-10 glass rounded-2xl p-5 flex items-start gap-3">
               <Sparkles size={18} className="text-primary mt-0.5 shrink-0" />
               <p className="text-sm text-muted-foreground leading-relaxed">
-                <span className="text-foreground font-medium">Currently accepting 2 projects for Q1 2025.</span>{" "}
-                If you've got a real problem and a real budget, I'd love to hear about it.
+                <span className="text-foreground font-medium">Taking on a small number of projects in 2025.</span>{" "}
+                If you have a real problem and a realistic budget, tell me about it and I will tell you honestly whether I am the right fit.
               </p>
             </div>
           </motion.div>
