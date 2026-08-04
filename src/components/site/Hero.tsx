@@ -288,7 +288,7 @@ const Hero = () => {
                 Start a project
               </a>
               <a
-                href="/Olatoyosi_Ridwan_Django_CV.pdf"
+                href="/Olatoyosi__Ridwan_Django_CV.pdf"
                 download
                 className="group inline-flex items-center gap-2.5 rounded-md border border-border/70 px-5 py-3 font-display text-sm font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:border-primary/40 hover:-translate-y-0.5"
               >
