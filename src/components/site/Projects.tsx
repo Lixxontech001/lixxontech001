@@ -38,13 +38,12 @@ const Projects = () => {
               transition={{ duration: reduced ? 0 : 0.7 }}
               className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight"
             >
-              Products that <span className="text-gradient-primary">scale</span>.
+              What I have <span className="text-gradient-primary">actually built</span>.
             </motion.h2>
           </div>
           <p className="text-muted-foreground max-w-sm">
-            Real Django powered applications shipped end to end, from data model to deployment. Tap any card for the full case study.
-            Live demo is a placeholder that looks just like the project. The deployed client build is private. Request a walkthrough via the contact form.
-
+            Self directed and freelance Django builds, taken from data model to deployment. Tap any card for the full technical case study.
+            Demo links point to a representative reference product, not a live deployment. Ask me for a private code or screen walkthrough.
           </p>
         </div>
 
@@ -87,6 +86,11 @@ const Projects = () => {
                   <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
                   {p.year}
                 </div>
+                {p.tag && (
+                  <div className="absolute top-3 left-1/2 -translate-x-1/2 hidden sm:inline-flex items-center rounded-full bg-background/80 backdrop-blur px-2.5 py-1 mono text-[10px] uppercase tracking-widest border border-border text-muted-foreground">
+                    {p.tag}
+                  </div>
+                )}
                 <div className="absolute top-3 right-3 inline-flex items-center gap-1 rounded-full bg-primary text-primary-foreground px-2.5 py-1 mono text-[10px] uppercase tracking-widest font-semibold opacity-0 group-hover:opacity-100 translate-y-[-4px] group-hover:translate-y-0 transition-all duration-500">
                   Case study <ArrowUpRight size={11} />
                 </div>
@@ -171,9 +175,9 @@ const Projects = () => {
           ))}
         </div>
         <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
-          <p className="text-sm text-muted-foreground">Plus 15 more NDA-protected projects – ask me for an anonymized portfolio PDF.</p>
+          <p className="text-sm text-muted-foreground">Want to read the actual code or walk through the architecture? I am happy to screen share.</p>
           <Button asChild variant="primary" size="sm">
-            <a href="#contact">Ask Me <ArrowUpRight size={14} /></a>
+            <a href="#contact">Request a walkthrough <ArrowUpRight size={14} /></a>
           </Button>
         </div>
       </div>
