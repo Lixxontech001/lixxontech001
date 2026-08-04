@@ -1,14 +1,17 @@
 import { motion } from "framer-motion";
-import { Database, Layers, Zap, ShieldCheck, Code2, MessageSquare } from "lucide-react";
+import { Database, Layers, Zap, ShieldCheck, Code2, MessageSquare, Cpu, Search } from "lucide-react";
 
 const reasons = [
-  { icon: Database, title: "Django Expertise", desc: "Deep mastery of Django ORM, DRF, Channels, and deployment. Production backends that scale to millions of requests." },
-  { icon: Layers, title: "Full Stack Delivery", desc: "One engineer, entire stack. Backend, frontend, APIs, databases, infra. I own the outcome." },
-  { icon: Zap, title: "Rapid Prototyping", desc: "Django's batteries included philosophy lets me ship validated MVPs in weeks, not months." },
-  { icon: ShieldCheck, title: "Secure & Reliable", desc: "OWASP aligned auth, audit logs, and data protection, backed by cybersecurity coursework at LAUTECH." },
-  { icon: Code2, title: "Clean Maintainable Code", desc: "PEP8 + type hints + pytest + CI. Your future team will thank you for the codebase you inherit." },
-  { icon: MessageSquare, title: "Transparent Communication", desc: "Frequent demos, Loom updates, honest deadlines. You'll always know exactly where the project stands." },
+  { icon: Database, title: "Django Depth", desc: "The ORM, DRF, Celery, Channels and migrations are where I spend most of my time. I model data first and let the API follow." },
+  { icon: Layers, title: "Full Stack Delivery", desc: "One developer for the backend, the React frontend, the database and the deploy. Nothing gets lost between handoffs." },
+  { icon: Cpu, title: "AI Augmented Development", desc: "I use AI coding tools heavily to move fast on boilerplate, tests and refactors. Architecture, data modelling and code review stay mine. You get the speed and still get a codebase someone thought about." },
+  { icon: Zap, title: "Fast, Scoped Iteration", desc: "Small slices shipped to a staging URL every few days, so you steer the build while it is still cheap to change direction." },
+  { icon: ShieldCheck, title: "Security Minded", desc: "Studying Cybersecurity at LAUTECH shapes how I handle auth, permissions, secrets and audit trails. Secure defaults, not afterthoughts." },
+  { icon: Code2, title: "Readable Code", desc: "PEP8, type hints, tests on the logic that matters, and a README that lets the next developer start on day one." },
+  { icon: Search, title: "Honest Scoping", desc: "If something is outside what I have done before, I tell you before we start rather than learning quietly on your budget." },
+  { icon: MessageSquare, title: "Clear Communication", desc: "Written updates, short recorded walkthroughs, and deadlines I actually believe in when I give them." },
 ];
+
 
 const WhyMe = () => {
   return (
