@@ -3,10 +3,8 @@ import { GraduationCap, MapPin, Briefcase, Sparkles } from "lucide-react";
 import portrait from "@/assets/about-portrait.jpg";
 
 const timeline = [
-  { year: "2025", title: "Founding Lixxon_Tech", desc: "Productized engineering for startups: SaaS, marketplaces, and internal tools shipped end to end." },
-  { year: "2025", title: "Lead Engineer · Fintech & SaaS", desc: "Led builds for a neobank admin console, a legal research platform, and a multi vendor marketplace." },
-  { year: "2024", title: "Full Stack Engineer", desc: "Shipped MediBoard (hospital suite), EstatePro CRM and FleetGo logistics platform across 3 industries." },
-  { year: "2025", title: "BSc Cybersecurity · LAUTECH", desc: "Pursuing a degree in Cybersecurity, sharpening the security mindset I bring to every system." },
+  { year: "2025", title: "Lixxon_Tech", desc: "Freelance Django and React development for founders and small teams." },
+  { year: "2025", title: "B.Tech Cybersecurity · LAUTECH", desc: "Studying Cybersecurity, which shapes how I handle auth, permissions and audit trails." },
 ];
 
 
@@ -52,7 +50,7 @@ const About = () => {
               </div>
               <div className="glass rounded-xl p-3 flex items-center gap-2.5">
                 <GraduationCap size={16} className="text-primary" />
-                <span className="text-xs">LAUTECH · Cybersecurity</span>
+                <span className="text-xs">LAUTECH · Cybersecurity student</span>
               </div>
             </div>
           </motion.div>
@@ -132,8 +130,8 @@ const About = () => {
             <div className="mt-10 glass rounded-2xl p-5 flex items-start gap-3">
               <Sparkles size={18} className="text-primary mt-0.5 shrink-0" />
               <p className="text-sm text-muted-foreground leading-relaxed">
-                <span className="text-foreground font-medium">Currently accepting 2 projects for Q1 2025.</span>{" "}
-                If you've got a real problem and a real budget, I'd love to hear about it.
+                <span className="text-foreground font-medium">Taking on a small number of projects in 2025.</span>{" "}
+                If you have a real problem and a realistic budget, tell me about it and I will tell you honestly whether I am the right fit.
               </p>
             </div>
           </motion.div>
